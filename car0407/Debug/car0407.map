@@ -1,0 +1,2561 @@
+******************************************************************************
+             TMS320C2000 Linker PC v6.2.5                      
+******************************************************************************
+>> Linked Fri Mar 01 16:01:13 2019
+
+OUTPUT FILE NAME:   <car0407.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000d0bf
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  ZONE0                 00004000   00001000  00000000  00001000  RWIX
+  RAM_L0_6h             00008000   00006c00  00006114  00000aec  RWIX
+  ZONE6                 00100000   00100000  00000000  00100000  RWIX
+  ZONE7A                00200000   0000fc00  00000000  0000fc00  RWIX
+  FLASHD                00300000   00038000  00006114  00031eec  RWIX
+  FLASHA                00338000   00007f80  00000044  00007f3c  RWIX
+  CSM_RSVD              0033ff80   00000076  00000000  00000076  RWIX
+  BEGIN_FLASH           0033fff6   00000002  00000002  00000000  RWIX
+  CSM_PWL               0033fff8   00000008  00000000  00000008  RWIX
+  ADC_CAL               00380080   00000009  00000007  00000002  RWIX
+  OTP                   00380400   00000400  00000000  00000400  RWIX
+  IQTABLES              003fe000   00000b50  00000000  00000b50  RWIX
+  IQTABLES2             003feb50   0000008c  00000000  0000008c  RWIX
+  FPUTABLES             003febdc   000006a0  00000000  000006a0  RWIX
+  ROM                   003ff27c   00000d44  00000000  00000d44  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+  VECTORS               003fffc2   0000003e  00000000  0000003e  RWIX
+
+PAGE 1:
+  RAMM0                 00000000   00000400  00000300  00000100  RWIX
+  BOOT_RSVD             00000400   00000080  00000000  00000080  RWIX
+  RAMM1                 00000480   00000380  00000000  00000380  RWIX
+  DEV_EMU               00000880   00000180  000000d0  000000b0  RWIX
+  FLASH_REGS            00000a80   00000060  00000008  00000058  RWIX
+  CSM                   00000ae0   00000010  00000010  00000000  RWIX
+  ADC_MIRROR            00000b00   00000010  00000010  00000000  RWIX
+  XINTF                 00000b20   00000020  0000001e  00000002  RWIX
+  CPU_TIMER0            00000c00   00000008  00000008  00000000  RWIX
+  CPU_TIMER1            00000c08   00000008  00000008  00000000  RWIX
+  CPU_TIMER2            00000c10   00000008  00000008  00000000  RWIX
+  PIE_CTRL              00000ce0   00000020  0000001a  00000006  RWIX
+  PIE_VECT              00000d00   00000100  00000100  00000000  RWIX
+  DMA                   00001000   00000200  000000e0  00000120  RWIX
+  MCBSPA                00005000   00000040  00000025  0000001b  RWIX
+  MCBSPB                00005040   00000040  00000025  0000001b  RWIX
+  ECANA                 00006000   00000040  00000034  0000000c  RWIX
+  ECANA_LAM             00006040   00000040  00000040  00000000  RWIX
+  ECANA_MOTS            00006080   00000040  00000040  00000000  RWIX
+  ECANA_MOTO            000060c0   00000040  00000040  00000000  RWIX
+  ECANA_MBOX            00006100   00000100  00000100  00000000  RWIX
+  ECANB                 00006200   00000040  00000034  0000000c  RWIX
+  ECANB_LAM             00006240   00000040  00000040  00000000  RWIX
+  ECANB_MOTS            00006280   00000040  00000040  00000000  RWIX
+  ECANB_MOTO            000062c0   00000040  00000040  00000000  RWIX
+  ECANB_MBOX            00006300   00000100  00000100  00000000  RWIX
+  EPWM1                 00006800   00000022  00000022  00000000  RWIX
+  EPWM2                 00006840   00000022  00000022  00000000  RWIX
+  EPWM3                 00006880   00000022  00000022  00000000  RWIX
+  EPWM4                 000068c0   00000022  00000022  00000000  RWIX
+  EPWM5                 00006900   00000022  00000022  00000000  RWIX
+  EPWM6                 00006940   00000022  00000022  00000000  RWIX
+  ECAP1                 00006a00   00000020  00000020  00000000  RWIX
+  ECAP2                 00006a20   00000020  00000020  00000000  RWIX
+  ECAP3                 00006a40   00000020  00000020  00000000  RWIX
+  ECAP4                 00006a60   00000020  00000020  00000000  RWIX
+  ECAP5                 00006a80   00000020  00000020  00000000  RWIX
+  ECAP6                 00006aa0   00000020  00000020  00000000  RWIX
+  EQEP1                 00006b00   00000040  00000040  00000000  RWIX
+  EQEP2                 00006b40   00000040  00000040  00000000  RWIX
+  GPIOCTRL              00006f80   00000040  0000002e  00000012  RWIX
+  GPIODAT               00006fc0   00000020  00000020  00000000  RWIX
+  GPIOINT               00006fe0   00000020  0000000a  00000016  RWIX
+  SYSTEM                00007010   00000020  00000020  00000000  RWIX
+  SPIA                  00007040   00000010  00000010  00000000  RWIX
+  SCIA                  00007050   00000010  00000010  00000000  RWIX
+  XINTRUPT              00007070   00000010  00000010  00000000  RWIX
+  ADC                   00007100   00000020  0000001e  00000002  RWIX
+  SCIB                  00007750   00000010  00000010  00000000  RWIX
+  SCIC                  00007770   00000010  00000010  00000000  RWIX
+  I2CA                  00007900   00000040  00000022  0000001e  RWIX
+  RAML6h                0000ec00   00000400  00000400  00000000  RWIX
+  RAML7                 0000f000   00001000  00000c78  00000388  RWIX
+  ZONE7B                0020fc00   00000400  00000000  00000400  RWIX
+  CSM_PWL               0033fff8   00000008  00000008  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.const     0    00008000    00000000     UNINITIALIZED
+
+.pinit     0    00008000    00000000     UNINITIALIZED
+
+.text      0    00300000    000052f0     RUN ADDR = 00008000
+                  00300000    00001d66     Fml.obj (.text)
+                  00301d66    00000b94     trajectory.obj (.text)
+                  003028fa    000006e2     filter.obj (.text)
+                  00302fdc    0000058b     car.obj (.text:retain)
+                  00303567    00000525     Hal.obj (.text)
+                  00303a8c    00000377     Fml.obj (.text:retain)
+                  00303e03    00000323     DSP2833x_DefaultIsr.obj (.text:retain)
+                  00304126    000002be     decentralized.obj (.text)
+                  003043e4    00000243     HMC5983.obj (.text)
+                  00304627    000001f5     message.obj (.text)
+                  0030481c    00000123     rts2800_fpu32.lib : strtod.obj (.text)
+                  0030493f    00000112     DSP2833x_SysCtrl.obj (.text)
+                  00304a51    000000d9     mathex.obj (.text)
+                  00304b2a    000000c4     rts2800_fpu32.lib : atan2.obj (.text)
+                  00304bee    0000009c                       : fd_add.obj (.text)
+                  00304c8a    0000009a     car.obj (.text)
+                  00304d24    0000008b     rts2800_fpu32.lib : fd_div.obj (.text)
+                  00304daf    00000088                       : fs_div.obj (.text)
+                  00304e37    00000083                       : fd_mpy.obj (.text)
+                  00304eba    0000007c     DSP2833x_CpuTimers.obj (.text)
+                  00304f36    0000006f     rts2800_fpu32.lib : atan.obj (.text)
+                  00304fa5    00000061                       : cos.obj (.text)
+                  00305006    00000061                       : tan.obj (.text)
+                  00305067    00000058                       : sin.obj (.text)
+                  003050bf    00000046                       : boot.obj (.text)
+                  00305105    00000031                       : atoi.obj (.text)
+                  00305136    00000028     DSP2833x_PieCtrl.obj (.text)
+                  0030515e    00000023     rts2800_fpu32.lib : fd_tofs.obj (.text)
+                  00305181    00000001     --HOLE-- [fill = 0]
+                  00305182    00000023                       : sqrt.obj (.text)
+                  003051a5    00000022                       : i_div.obj (.text)
+                  003051c7    00000021                       : memcpy_ff.obj (.text)
+                  003051e8    00000020     DSP2833x_PieVect.obj (.text)
+                  00305208    0000001f     rts2800_fpu32.lib : fd_tol.obj (.text)
+                  00305227    0000001d                       : i_tofd.obj (.text)
+                  00305244    0000001c                       : fs_tofd.obj (.text)
+                  00305260    00000019                       : args_main.obj (.text)
+                  00305279    00000019                       : exit.obj (.text)
+                  00305292    00000016                       : frexp.obj (.text)
+                  003052a8    00000014                       : ll_mpy.obj (.text)
+                  003052bc    0000000e                       : fd_sub.obj (.text)
+                  003052ca    0000000b                       : u_div.obj (.text)
+                  003052d5    0000000a                       : strcmp.obj (.text)
+                  003052df    00000009                       : _lock.obj (.text)
+                  003052e8    00000004     DSP28xxx_usDelay.obj (.text)
+                  003052ec    00000004     rts2800_fpu32.lib : atof.obj (.text)
+
+.cinit     0    003052f0    00000b2c     RUN ADDR = 0000d2f0
+                  003052f0    000003eb     Fml.obj (.cinit)
+                  003056db    000002b8     car.obj (.cinit)
+                  00305993    00000198     trajectory.obj (.cinit)
+                  00305b2b    00000135     filter.obj (.cinit)
+                  00305c60    00000115     decentralized.obj (.cinit)
+                  00305d75    00000046     MS5803-01BA.obj (.cinit)
+                  00305dbb    00000021     HMC5983.obj (.cinit)
+                  00305ddc    00000016     formation.obj (.cinit)
+                  00305df2    0000000a     rts2800_fpu32.lib : _lock.obj (.cinit)
+                  00305dfc    0000000a                       : exit.obj (.cinit)
+                  00305e06    00000008     Hal.obj (.cinit)
+                  00305e0e    00000008     flightFSM.obj (.cinit)
+                  00305e16    00000004     rts2800_fpu32.lib : errno.obj (.cinit)
+                  00305e1a    00000002     --HOLE-- [fill = 0]
+
+.econst    0    00305e1c    000002d4     RUN ADDR = 0000de1c
+                  00305e1c    00000101     rts2800_fpu32.lib : ctype.obj (.econst:.string:__ctypes_)
+                  00305f1d    00000001     --HOLE-- [fill = 0]
+                  00305f1e    00000100     DSP2833x_PieVect.obj (.econst)
+                  0030601e    00000042     Fml.obj (.econst)
+                  00306060    00000014     rts2800_fpu32.lib : strtod.obj (.econst:_digits)
+                  00306074    0000000c                       : strtod.obj (.econst:_powerof10)
+                  00306080    00000008                       : atan.obj (.econst:_a$1)
+                  00306088    00000008                       : atan2.obj (.econst:_a$1)
+                  00306090    00000008     filter.obj (.econst)
+                  00306098    00000006     Fml.obj (.econst:.string)
+                  0030609e    00000006     Fml.obj (.econst:_B_acc)
+                  003060a4    00000006     Fml.obj (.econst:_B_gyro)
+                  003060aa    00000006     Fml.obj (.econst:_K_acc)
+                  003060b0    00000006     Fml.obj (.econst:_K_gyro)
+                  003060b6    00000006     Fml.obj (.econst:_MAG_OFFSET)
+                  003060bc    00000006     Fml.obj (.econst:_MAG_SCALE)
+                  003060c2    00000006     Fml.obj (.econst:_RCinputDZ)
+                  003060c8    00000006     filter.obj (.econst:_kp)
+                  003060ce    00000006     filter.obj (.econst:_kv)
+                  003060d4    00000006     constants.obj (.econst)
+                  003060da    00000004     Fml.obj (.econst:_$P$T0$1)
+                  003060de    00000004     Fml.obj (.econst:_KitoVel)
+                  003060e2    00000004     car.obj (.econst:_addr_server)
+                  003060e6    00000004     trajectory.obj (.econst)
+                  003060ea    00000003     HMC5983.obj (.econst)
+                  003060ed    00000001     --HOLE-- [fill = 0]
+                  003060ee    00000002     car.obj (.econst)
+
+.switch    0    003060f0    00000024     RUN ADDR = 0000e0f0
+                  003060f0    00000024     Fml.obj (.switch:_SetDestPos)
+
+copysections 
+*          0    00338000    0000003c     
+                  00338000    0000003c     DSP28xxx_SectionCopy_nonBIOS.obj (copysections)
+
+wddisable 
+*          0    0033803c    00000008     
+                  0033803c    00000008     DSP28xxx_CodeStartBranch_FLASH.obj (wddisable)
+
+codestart 
+*          0    0033fff6    00000002     
+                  0033fff6    00000002     DSP28xxx_CodeStartBranch_FLASH.obj (codestart)
+
+.adc_cal   0    00380080    00000007     NOLOAD SECTION
+                  00380080    00000007     DSP2833x_ADC_cal.obj (.adc_cal)
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_fpu32.lib : boot.obj (.reset)
+
+vectors    0    003fffc2    00000000     DSECT
+
+.stack     1    00000000    00000300     UNINITIALIZED
+                  00000000    00000300     --HOLE--
+
+DevEmuRegsFile 
+*          1    00000880    000000d0     UNINITIALIZED
+                  00000880    000000d0     DSP2833x_GlobalVariableDefs.obj (DevEmuRegsFile)
+
+FlashRegsFile 
+*          1    00000a80    00000008     UNINITIALIZED
+                  00000a80    00000008     DSP2833x_GlobalVariableDefs.obj (FlashRegsFile)
+
+CsmRegsFile 
+*          1    00000ae0    00000010     UNINITIALIZED
+                  00000ae0    00000010     DSP2833x_GlobalVariableDefs.obj (CsmRegsFile)
+
+AdcMirrorFile 
+*          1    00000b00    00000010     UNINITIALIZED
+                  00000b00    00000010     DSP2833x_GlobalVariableDefs.obj (AdcMirrorFile)
+
+XintfRegsFile 
+*          1    00000b20    0000001e     UNINITIALIZED
+                  00000b20    0000001e     DSP2833x_GlobalVariableDefs.obj (XintfRegsFile)
+
+CpuTimer0RegsFile 
+*          1    00000c00    00000008     UNINITIALIZED
+                  00000c00    00000008     DSP2833x_GlobalVariableDefs.obj (CpuTimer0RegsFile)
+
+CpuTimer1RegsFile 
+*          1    00000c08    00000008     UNINITIALIZED
+                  00000c08    00000008     DSP2833x_GlobalVariableDefs.obj (CpuTimer1RegsFile)
+
+CpuTimer2RegsFile 
+*          1    00000c10    00000008     UNINITIALIZED
+                  00000c10    00000008     DSP2833x_GlobalVariableDefs.obj (CpuTimer2RegsFile)
+
+PieCtrlRegsFile 
+*          1    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     DSP2833x_GlobalVariableDefs.obj (PieCtrlRegsFile)
+
+PieVectTableFile 
+*          1    00000d00    00000100     UNINITIALIZED
+                  00000d00    00000100     DSP2833x_GlobalVariableDefs.obj (PieVectTableFile)
+
+DmaRegsFile 
+*          1    00001000    000000e0     UNINITIALIZED
+                  00001000    000000e0     DSP2833x_GlobalVariableDefs.obj (DmaRegsFile)
+
+McbspaRegsFile 
+*          1    00005000    00000025     UNINITIALIZED
+                  00005000    00000025     DSP2833x_GlobalVariableDefs.obj (McbspaRegsFile)
+
+McbspbRegsFile 
+*          1    00005040    00000025     UNINITIALIZED
+                  00005040    00000025     DSP2833x_GlobalVariableDefs.obj (McbspbRegsFile)
+
+ECanaRegsFile 
+*          1    00006000    00000034     UNINITIALIZED
+                  00006000    00000034     DSP2833x_GlobalVariableDefs.obj (ECanaRegsFile)
+
+ECanaLAMRegsFile 
+*          1    00006040    00000040     UNINITIALIZED
+                  00006040    00000040     DSP2833x_GlobalVariableDefs.obj (ECanaLAMRegsFile)
+
+ECanaMOTSRegsFile 
+*          1    00006080    00000040     UNINITIALIZED
+                  00006080    00000040     DSP2833x_GlobalVariableDefs.obj (ECanaMOTSRegsFile)
+
+ECanaMOTORegsFile 
+*          1    000060c0    00000040     UNINITIALIZED
+                  000060c0    00000040     DSP2833x_GlobalVariableDefs.obj (ECanaMOTORegsFile)
+
+ECanaMboxesFile 
+*          1    00006100    00000100     UNINITIALIZED
+                  00006100    00000100     DSP2833x_GlobalVariableDefs.obj (ECanaMboxesFile)
+
+ECanbRegsFile 
+*          1    00006200    00000034     UNINITIALIZED
+                  00006200    00000034     DSP2833x_GlobalVariableDefs.obj (ECanbRegsFile)
+
+ECanbLAMRegsFile 
+*          1    00006240    00000040     UNINITIALIZED
+                  00006240    00000040     DSP2833x_GlobalVariableDefs.obj (ECanbLAMRegsFile)
+
+ECanbMOTSRegsFile 
+*          1    00006280    00000040     UNINITIALIZED
+                  00006280    00000040     DSP2833x_GlobalVariableDefs.obj (ECanbMOTSRegsFile)
+
+ECanbMOTORegsFile 
+*          1    000062c0    00000040     UNINITIALIZED
+                  000062c0    00000040     DSP2833x_GlobalVariableDefs.obj (ECanbMOTORegsFile)
+
+ECanbMboxesFile 
+*          1    00006300    00000100     UNINITIALIZED
+                  00006300    00000100     DSP2833x_GlobalVariableDefs.obj (ECanbMboxesFile)
+
+EPwm1RegsFile 
+*          1    00006800    00000022     UNINITIALIZED
+                  00006800    00000022     DSP2833x_GlobalVariableDefs.obj (EPwm1RegsFile)
+
+EPwm2RegsFile 
+*          1    00006840    00000022     UNINITIALIZED
+                  00006840    00000022     DSP2833x_GlobalVariableDefs.obj (EPwm2RegsFile)
+
+EPwm3RegsFile 
+*          1    00006880    00000022     UNINITIALIZED
+                  00006880    00000022     DSP2833x_GlobalVariableDefs.obj (EPwm3RegsFile)
+
+EPwm4RegsFile 
+*          1    000068c0    00000022     UNINITIALIZED
+                  000068c0    00000022     DSP2833x_GlobalVariableDefs.obj (EPwm4RegsFile)
+
+EPwm5RegsFile 
+*          1    00006900    00000022     UNINITIALIZED
+                  00006900    00000022     DSP2833x_GlobalVariableDefs.obj (EPwm5RegsFile)
+
+EPwm6RegsFile 
+*          1    00006940    00000022     UNINITIALIZED
+                  00006940    00000022     DSP2833x_GlobalVariableDefs.obj (EPwm6RegsFile)
+
+ECap1RegsFile 
+*          1    00006a00    00000020     UNINITIALIZED
+                  00006a00    00000020     DSP2833x_GlobalVariableDefs.obj (ECap1RegsFile)
+
+ECap2RegsFile 
+*          1    00006a20    00000020     UNINITIALIZED
+                  00006a20    00000020     DSP2833x_GlobalVariableDefs.obj (ECap2RegsFile)
+
+ECap3RegsFile 
+*          1    00006a40    00000020     UNINITIALIZED
+                  00006a40    00000020     DSP2833x_GlobalVariableDefs.obj (ECap3RegsFile)
+
+ECap4RegsFile 
+*          1    00006a60    00000020     UNINITIALIZED
+                  00006a60    00000020     DSP2833x_GlobalVariableDefs.obj (ECap4RegsFile)
+
+ECap5RegsFile 
+*          1    00006a80    00000020     UNINITIALIZED
+                  00006a80    00000020     DSP2833x_GlobalVariableDefs.obj (ECap5RegsFile)
+
+ECap6RegsFile 
+*          1    00006aa0    00000020     UNINITIALIZED
+                  00006aa0    00000020     DSP2833x_GlobalVariableDefs.obj (ECap6RegsFile)
+
+EQep1RegsFile 
+*          1    00006b00    00000040     UNINITIALIZED
+                  00006b00    00000040     DSP2833x_GlobalVariableDefs.obj (EQep1RegsFile)
+
+EQep2RegsFile 
+*          1    00006b40    00000040     UNINITIALIZED
+                  00006b40    00000040     DSP2833x_GlobalVariableDefs.obj (EQep2RegsFile)
+
+GpioCtrlRegsFile 
+*          1    00006f80    0000002e     UNINITIALIZED
+                  00006f80    0000002e     DSP2833x_GlobalVariableDefs.obj (GpioCtrlRegsFile)
+
+GpioDataRegsFile 
+*          1    00006fc0    00000020     UNINITIALIZED
+                  00006fc0    00000020     DSP2833x_GlobalVariableDefs.obj (GpioDataRegsFile)
+
+GpioIntRegsFile 
+*          1    00006fe0    0000000a     UNINITIALIZED
+                  00006fe0    0000000a     DSP2833x_GlobalVariableDefs.obj (GpioIntRegsFile)
+
+SysCtrlRegsFile 
+*          1    00007010    00000020     UNINITIALIZED
+                  00007010    00000020     DSP2833x_GlobalVariableDefs.obj (SysCtrlRegsFile)
+
+SpiaRegsFile 
+*          1    00007040    00000010     UNINITIALIZED
+                  00007040    00000010     DSP2833x_GlobalVariableDefs.obj (SpiaRegsFile)
+
+SciaRegsFile 
+*          1    00007050    00000010     UNINITIALIZED
+                  00007050    00000010     DSP2833x_GlobalVariableDefs.obj (SciaRegsFile)
+
+XIntruptRegsFile 
+*          1    00007070    00000010     UNINITIALIZED
+                  00007070    00000010     DSP2833x_GlobalVariableDefs.obj (XIntruptRegsFile)
+
+AdcRegsFile 
+*          1    00007100    0000001e     UNINITIALIZED
+                  00007100    0000001e     DSP2833x_GlobalVariableDefs.obj (AdcRegsFile)
+
+ScibRegsFile 
+*          1    00007750    00000010     UNINITIALIZED
+                  00007750    00000010     DSP2833x_GlobalVariableDefs.obj (ScibRegsFile)
+
+ScicRegsFile 
+*          1    00007770    00000010     UNINITIALIZED
+                  00007770    00000010     DSP2833x_GlobalVariableDefs.obj (ScicRegsFile)
+
+I2caRegsFile 
+*          1    00007900    00000022     UNINITIALIZED
+                  00007900    00000022     DSP2833x_GlobalVariableDefs.obj (I2caRegsFile)
+
+SD_BUFFER 
+*          1    0000ec00    00000400     UNINITIALIZED
+                  0000ec00    00000400     Fml.obj (SD_BUFFER)
+
+.ebss      1    0000f000    00000c78     UNINITIALIZED
+                  0000f000    000005c0     Fml.obj (.ebss)
+                  0000f5c0    00000334     car.obj (.ebss)
+                  0000f8f4    00000009     Hal.obj (.ebss)
+                  0000f8fd    00000002     flightFSM.obj (.ebss)
+                  0000f8ff    00000001     message.obj (.ebss)
+                  0000f900    000001c0     trajectory.obj (.ebss)
+                  0000fac0    000000ba     decentralized.obj (.ebss)
+                  0000fb7a    00000004     rts2800_fpu32.lib : _lock.obj (.ebss)
+                  0000fb7e    00000001                       : errno.obj (.ebss)
+                  0000fb7f    00000001     --HOLE--
+                  0000fb80    000000a2     filter.obj (.ebss)
+                  0000fc22    0000001e     MS5803-01BA.obj (.ebss)
+                  0000fc40    00000018     DSP2833x_CpuTimers.obj (.ebss)
+                  0000fc58    0000000e     HMC5983.obj (.ebss)
+                  0000fc66    0000000e     formation.obj (.ebss)
+                  0000fc74    00000004     rts2800_fpu32.lib : exit.obj (.ebss)
+
+.bss       1    0000f000    00000000     UNINITIALIZED
+
+CsmPwlFile 
+*          1    0033fff8    00000008     UNINITIALIZED
+                  0033fff8    00000008     DSP2833x_GlobalVariableDefs.obj (CsmPwlFile)
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000000       0 (00000000)     __stack
+
+00000880      22 (00000880)     _DevEmuRegs
+
+00000a80      2a (00000a80)     _FlashRegs
+
+00000ae0      2b (00000ac0)     _CsmRegs
+
+00000b00      2c (00000b00)     _AdcMirror
+00000b20      2c (00000b00)     _XintfRegs
+
+00000c00      30 (00000c00)     _CpuTimer0Regs
+00000c08      30 (00000c00)     _CpuTimer1Regs
+00000c10      30 (00000c00)     _CpuTimer2Regs
+
+00000ce0      33 (00000cc0)     _PieCtrlRegs
+
+00000d00      34 (00000d00)     _PieVectTable
+
+00001000      40 (00001000)     _DmaRegs
+
+00005000     140 (00005000)     _McbspaRegs
+
+00005040     141 (00005040)     _McbspbRegs
+
+00006000     180 (00006000)     _ECanaRegs
+
+00006040     181 (00006040)     _ECanaLAMRegs
+
+00006080     182 (00006080)     _ECanaMOTSRegs
+
+000060c0     183 (000060c0)     _ECanaMOTORegs
+
+00006100     184 (00006100)     _ECanaMboxes
+
+00006200     188 (00006200)     _ECanbRegs
+
+00006240     189 (00006240)     _ECanbLAMRegs
+
+00006280     18a (00006280)     _ECanbMOTSRegs
+
+000062c0     18b (000062c0)     _ECanbMOTORegs
+
+00006300     18c (00006300)     _ECanbMboxes
+
+00006800     1a0 (00006800)     _EPwm1Regs
+
+00006840     1a1 (00006840)     _EPwm2Regs
+
+00006880     1a2 (00006880)     _EPwm3Regs
+
+000068c0     1a3 (000068c0)     _EPwm4Regs
+
+00006900     1a4 (00006900)     _EPwm5Regs
+
+00006940     1a5 (00006940)     _EPwm6Regs
+
+00006a00     1a8 (00006a00)     _ECap1Regs
+00006a20     1a8 (00006a00)     _ECap2Regs
+
+00006a40     1a9 (00006a40)     _ECap3Regs
+00006a60     1a9 (00006a40)     _ECap4Regs
+
+00006a80     1aa (00006a80)     _ECap5Regs
+00006aa0     1aa (00006a80)     _ECap6Regs
+
+00006b00     1ac (00006b00)     _EQep1Regs
+
+00006b40     1ad (00006b40)     _EQep2Regs
+
+00006f80     1be (00006f80)     _GpioCtrlRegs
+
+00006fc0     1bf (00006fc0)     _GpioDataRegs
+00006fe0     1bf (00006fc0)     _GpioIntRegs
+
+00007010     1c0 (00007000)     _SysCtrlRegs
+
+00007040     1c1 (00007040)     _SpiaRegs
+00007050     1c1 (00007040)     _SciaRegs
+00007070     1c1 (00007040)     _XIntruptRegs
+
+00007100     1c4 (00007100)     _AdcRegs
+
+00007750     1dd (00007740)     _ScibRegs
+00007770     1dd (00007740)     _ScicRegs
+
+00007900     1e4 (00007900)     _I2caRegs
+
+0000de1c     378 (0000de00)     __ctypes_
+
+0000df1e     37c (0000df00)     _PieVectTableInit
+
+0000e01e     380 (0000e000)     _MEANCYCLE
+0000e020     380 (0000e000)     _U4i_sat
+0000e022     380 (0000e000)     _U3i_sat
+0000e024     380 (0000e000)     _U2i_sat
+0000e026     380 (0000e000)     _PULSE_MAX
+0000e028     380 (0000e000)     _PULSE_MIN
+0000e02a     380 (0000e000)     _U3d_sat
+0000e02c     380 (0000e000)     _U2d_sat
+0000e02e     380 (0000e000)     _U4d_sat
+0000e030     380 (0000e000)     _U2_sat
+0000e032     380 (0000e000)     _U4_sat
+0000e034     380 (0000e000)     _U3_sat
+0000e036     380 (0000e000)     _fGYRO
+0000e038     380 (0000e000)     _Duty_New
+0000e03c     380 (0000e000)     _MAGNETIC_VARIATION
+0000e03e     380 (0000e000)     _pi
+
+0000e040     381 (0000e040)     _Duty_New_b
+0000e042     381 (0000e040)     _basicOutFly
+0000e044     381 (0000e040)     _basicOutGround
+0000e046     381 (0000e040)     _fMag
+0000e048     381 (0000e040)     _INTG_POS_SAT
+0000e04a     381 (0000e040)     _fACC
+
+0000e090     382 (0000e080)     _biasGravity
+0000e092     382 (0000e080)     _Kha
+0000e094     382 (0000e080)     _Khv
+0000e096     382 (0000e080)     _Khba
+0000e09e     382 (0000e080)     _B_acc
+0000e0a4     382 (0000e080)     _B_gyro
+0000e0aa     382 (0000e080)     _K_acc
+0000e0b0     382 (0000e080)     _K_gyro
+0000e0b6     382 (0000e080)     _MAG_OFFSET
+0000e0bc     382 (0000e080)     _MAG_SCALE
+
+0000e0c2     383 (0000e0c0)     _RCinputDZ
+0000e0d4     383 (0000e0c0)     _PITCH_SAT
+0000e0d6     383 (0000e0c0)     _fATTSET
+0000e0d8     383 (0000e0c0)     _DTIME_INNERLOOP
+0000e0de     383 (0000e0c0)     _KitoVel
+0000e0e2     383 (0000e0c0)     _addr_server
+0000e0e6     383 (0000e0c0)     _errYaw
+0000e0e8     383 (0000e0c0)     _minyawstep
+0000e0ea     383 (0000e0c0)     _HMCCOUNTend
+0000e0eb     383 (0000e0c0)     _HMCCOUNTbegin
+0000e0ec     383 (0000e0c0)     _HMC_threshold
+0000e0ee     383 (0000e0c0)     _w_sat
+
+0000ec00     3b0 (0000ec00)     _SD_buffer
+
+0000f000     3c0 (0000f000)     _cnt_URMTrigger
+0000f001     3c0 (0000f000)     _bTurnAuto
+0000f002     3c0 (0000f000)     _bUSIdle
+0000f003     3c0 (0000f000)     _cnt_CG
+0000f004     3c0 (0000f000)     _rec_Scib
+0000f005     3c0 (0000f000)     _RX_Count
+0000f006     3c0 (0000f000)     _cnt_SDR
+0000f007     3c0 (0000f000)     _bThroOff
+0000f008     3c0 (0000f000)     _isTakeOff
+0000f009     3c0 (0000f000)     _time_count_UWB
+0000f00a     3c0 (0000f000)     _cnt_SV
+0000f00b     3c0 (0000f000)     _BiasGPS_X
+0000f00c     3c0 (0000f000)     _cnt_comma
+0000f00d     3c0 (0000f000)     _data_temp
+0000f00e     3c0 (0000f000)     _BiasGPS_Y
+0000f00f     3c0 (0000f000)     _isSure
+0000f010     3c0 (0000f000)     _pTail
+0000f011     3c0 (0000f000)     _lenGPS
+0000f012     3c0 (0000f000)     _cnt_MA
+0000f013     3c0 (0000f000)     _pHead
+0000f014     3c0 (0000f000)     _cnt_GPS
+0000f015     3c0 (0000f000)     _cnt_RC6
+0000f016     3c0 (0000f000)     _cnt_GRC
+0000f017     3c0 (0000f000)     _bShutdown
+0000f018     3c0 (0000f000)     _bRC6high
+0000f019     3c0 (0000f000)     _retSD
+0000f01a     3c0 (0000f000)     _FlagSetHP
+0000f01b     3c0 (0000f000)     _countHomePoint
+0000f01c     3c0 (0000f000)     _rec_Scic
+0000f01d     3c0 (0000f000)     _rec_Scia
+0000f01e     3c0 (0000f000)     _lenWRL
+0000f01f     3c0 (0000f000)     _debugonly
+0000f020     3c0 (0000f000)     _cnt_SDW
+0000f021     3c0 (0000f000)     _lenBuffer
+0000f022     3c0 (0000f000)     _cnt_SDBA
+0000f023     3c0 (0000f000)     _pWrite
+0000f024     3c0 (0000f000)     _offBufHead
+0000f025     3c0 (0000f000)     _offBufTail
+0000f026     3c0 (0000f000)     _accy_feed_
+0000f028     3c0 (0000f000)     _Height_URM37
+0000f02a     3c0 (0000f000)     _accx_feed_
+0000f02c     3c0 (0000f000)     _KLong2Meter
+0000f02e     3c0 (0000f000)     _KLati2Meter
+0000f030     3c0 (0000f000)     _Kp_x
+0000f032     3c0 (0000f000)     _accx_feed
+0000f034     3c0 (0000f000)     _accy_feed
+0000f036     3c0 (0000f000)     _U3d
+0000f038     3c0 (0000f000)     _U4d
+0000f03a     3c0 (0000f000)     _U3i
+0000f03c     3c0 (0000f000)     _U2i
+0000f03e     3c0 (0000f000)     _U4_
+
+0000f040     3c1 (0000f040)     _U2
+0000f042     3c1 (0000f040)     _U3_
+0000f044     3c1 (0000f040)     _U2_
+0000f046     3c1 (0000f040)     _U2d
+0000f048     3c1 (0000f040)     _U4i
+0000f04a     3c1 (0000f040)     _U3
+0000f04c     3c1 (0000f040)     _Ts_roll
+0000f04e     3c1 (0000f040)     _Ts_yaw
+0000f050     3c1 (0000f040)     _Ts_pitch
+0000f052     3c1 (0000f040)     _RC_alfa
+0000f054     3c1 (0000f040)     _RCInput
+0000f056     3c1 (0000f040)     _U4
+0000f058     3c1 (0000f040)     _anglenow
+0000f05a     3c1 (0000f040)     _Kp_y
+0000f05c     3c1 (0000f040)     _height_
+0000f05e     3c1 (0000f040)     _err_vheight_
+0000f060     3c1 (0000f040)     _err_height
+0000f062     3c1 (0000f040)     _err_vheight
+0000f064     3c1 (0000f040)     _err_height_
+0000f066     3c1 (0000f040)     _t_error
+0000f068     3c1 (0000f040)     _vheight_
+0000f06a     3c1 (0000f040)     _intg_height
+0000f06c     3c1 (0000f040)     _bufI32
+0000f06e     3c1 (0000f040)     _basicOut
+0000f070     3c1 (0000f040)     _tv
+0000f072     3c1 (0000f040)     _Ki_z
+0000f074     3c1 (0000f040)     _intgY
+0000f076     3c1 (0000f040)     _intgX
+0000f078     3c1 (0000f040)     _Kd_y
+0000f07a     3c1 (0000f040)     _Sector_buffer
+0000f07c     3c1 (0000f040)     _flp_temp
+0000f07e     3c1 (0000f040)     _Ki_x
+
+0000f080     3c2 (0000f080)     _Kd_z
+0000f082     3c2 (0000f080)     _Kp_z
+0000f084     3c2 (0000f080)     _Tsita_hat
+0000f086     3c2 (0000f080)     _Cfai_hat
+0000f088     3c2 (0000f080)     _Csita_hat
+0000f08a     3c2 (0000f080)     _Sfai_hat
+0000f08c     3c2 (0000f080)     _Ki_y
+0000f08e     3c2 (0000f080)     _vTemp
+0000f090     3c2 (0000f080)     _Kd_x
+0000f092     3c2 (0000f080)     _pdX
+0000f094     3c2 (0000f080)     _pdY
+0000f096     3c2 (0000f080)     _err_pitch
+0000f09a     3c2 (0000f080)     _err_roll
+0000f09e     3c2 (0000f080)     _err_yaw
+0000f0a2     3c2 (0000f080)     _err_pitch_f
+0000f0a6     3c2 (0000f080)     _err_roll_f
+0000f0aa     3c2 (0000f080)     _err_yaw_f
+0000f0ae     3c2 (0000f080)     _RCinputSM
+0000f0b2     3c2 (0000f080)     _Atitude_zero
+0000f0b6     3c2 (0000f080)     _att_set_NAV
+0000f0ba     3c2 (0000f080)     _Cos_Latitude_zero
+
+0000f0c0     3c3 (0000f0c0)     _Longitude_zero
+0000f0c4     3c3 (0000f0c0)     _Latitude_zero
+0000f0c8     3c3 (0000f0c0)     _vel1_set
+0000f0cc     3c3 (0000f0c0)     _pos1_set
+0000f0d0     3c3 (0000f0c0)     _gyro_V4
+0000f0d6     3c3 (0000f0c0)     _att_set_V4
+0000f0dc     3c3 (0000f0c0)     _Uout_gyro_
+0000f0e2     3c3 (0000f0c0)     _Uout_V4plus_
+0000f0e8     3c3 (0000f0c0)     _Uout_gyro
+0000f0ee     3c3 (0000f0c0)     _Uout_V4plus
+0000f0f4     3c3 (0000f0c0)     _homepoint
+0000f0fa     3c3 (0000f0c0)     _buf_Acc
+
+0000f100     3c4 (0000f100)     _posGPS_
+0000f106     3c4 (0000f100)     _att_hat
+0000f10c     3c4 (0000f100)     _d_att
+0000f112     3c4 (0000f100)     _gyro_bias
+0000f118     3c4 (0000f100)     _gyro_bias_sum
+0000f11e     3c4 (0000f100)     _d_att_hat
+0000f124     3c4 (0000f100)     _g
+0000f12a     3c4 (0000f100)     _rc_att_out
+0000f130     3c4 (0000f100)     _f
+0000f136     3c4 (0000f100)     _rc_att_u_
+
+0000f140     3c5 (0000f140)     _sensitivity
+0000f146     3c5 (0000f140)     _strZigbeeResetAddr
+0000f14e     3c5 (0000f140)     _att_1
+0000f156     3c5 (0000f140)     _att_0
+0000f15e     3c5 (0000f140)     _gyro_1
+0000f16a     3c5 (0000f140)     _gyro_2
+
+0000f180     3c6 (0000f180)     _mag_1
+0000f18c     3c6 (0000f180)     _mag_0
+0000f198     3c6 (0000f180)     _RC_width
+0000f1a4     3c6 (0000f180)     _mag_2
+0000f1b0     3c6 (0000f180)     _acc_0
+
+0000f1c0     3c7 (0000f1c0)     _gyro_0
+0000f1cc     3c7 (0000f1c0)     _acc_2
+0000f1d8     3c7 (0000f1c0)     _acc_1
+0000f1e4     3c7 (0000f1c0)     _rdataA
+
+0000f200     3c8 (0000f200)     _rc_att_z_
+0000f212     3c8 (0000f200)     _rc_att_z
+0000f224     3c8 (0000f200)     _UWB
+
+0000f240     3c9 (0000f240)     _pComma
+0000f254     3c9 (0000f240)     _point_set
+
+0000f280     3ca (0000f280)     _Wirelessstring
+
+0000f2c0     3cb (0000f2c0)     _GPS
+
+0000f300     3cc (0000f300)     _UWBRxBuffer
+
+0000f340     3cd (0000f340)     _b_send
+
+0000f3c0     3cf (0000f3c0)     _msgRead
+
+0000f440     3d1 (0000f440)     _msgRecv
+
+0000f4c0     3d3 (0000f4c0)     _arraySchedule
+
+0000f540     3d5 (0000f540)     _GPSstring
+
+0000f5c0     3d7 (0000f5c0)     _ack
+0000f5c1     3d7 (0000f5c0)     _swarmflag
+0000f5c2     3d7 (0000f5c0)     _iNeighbors
+0000f5c3     3d7 (0000f5c0)     _i_w
+0000f5c4     3d7 (0000f5c0)     _FLAG_HeightFliter
+0000f5c5     3d7 (0000f5c0)     _sendType
+0000f5c6     3d7 (0000f5c0)     _pres_biased
+0000f5c7     3d7 (0000f5c0)     _bInitializing
+0000f5c8     3d7 (0000f5c0)     _timer_count
+0000f5c9     3d7 (0000f5c0)     _bUWBUpdate
+0000f5ca     3d7 (0000f5c0)     _bGPSUpdate
+0000f5cb     3d7 (0000f5c0)     _bGPSnormal
+0000f5cc     3d7 (0000f5c0)     _bStatus
+0000f5cd     3d7 (0000f5c0)     _FlagYawRun
+0000f5ce     3d7 (0000f5c0)     _YawSpinRun
+0000f5cf     3d7 (0000f5c0)     _bAutoMode
+0000f5d0     3d7 (0000f5c0)     _nsvGPS
+0000f5d1     3d7 (0000f5c0)     _com_period_formation
+0000f5d2     3d7 (0000f5c0)     _com_period_report
+0000f5d4     3d7 (0000f5c0)     _time_zero
+0000f5d6     3d7 (0000f5c0)     _w
+0000f5d8     3d7 (0000f5c0)     _w_all
+0000f5da     3d7 (0000f5c0)     _att_zero
+0000f5dc     3d7 (0000f5c0)     _UWB_angle
+0000f5de     3d7 (0000f5c0)     _height
+0000f5e0     3d7 (0000f5c0)     _vHeight
+0000f5e2     3d7 (0000f5c0)     _att_error
+0000f5e4     3d7 (0000f5c0)     _w1
+0000f5e6     3d7 (0000f5c0)     _sectorSD
+0000f5e8     3d7 (0000f5c0)     _w3
+0000f5ea     3d7 (0000f5c0)     _w2
+0000f5ec     3d7 (0000f5c0)     _tGPS_1
+0000f5ee     3d7 (0000f5c0)     _tGPS_0
+0000f5f0     3d7 (0000f5c0)     _w_wheel
+0000f5f2     3d7 (0000f5c0)     _msgR
+0000f5f4     3d7 (0000f5c0)     _w4
+0000f5f6     3d7 (0000f5c0)     _t0
+0000f5f8     3d7 (0000f5c0)     _tempa
+0000f5fa     3d7 (0000f5c0)     _yaw
+0000f5fc     3d7 (0000f5c0)     _pres
+
+0000f600     3d8 (0000f600)     _gyro_raw
+0000f603     3d8 (0000f600)     _HMC_raw
+0000f606     3d8 (0000f600)     _acc_raw
+0000f609     3d8 (0000f600)     _cmps_raw
+0000f60c     3d8 (0000f600)     _RCpos_set
+0000f610     3d8 (0000f600)     _pwm_i
+0000f614     3d8 (0000f600)     _fsm
+0000f618     3d8 (0000f600)     _timeGPS
+0000f61c     3d8 (0000f600)     _RCacc_set
+0000f620     3d8 (0000f600)     _RCspd_set
+0000f624     3d8 (0000f600)     _att_set
+0000f62a     3d8 (0000f600)     _posGPS
+0000f630     3d8 (0000f600)     _att
+0000f636     3d8 (0000f600)     _att2
+
+0000f640     3d9 (0000f640)     _vGPS_dif
+0000f646     3d9 (0000f640)     _vGPS
+0000f64c     3d9 (0000f640)     _vGPS_ori
+0000f652     3d9 (0000f640)     _n
+0000f658     3d9 (0000f640)     _acc
+0000f65e     3d9 (0000f640)     _ure
+0000f664     3d9 (0000f640)     _mag
+0000f66a     3d9 (0000f640)     _gyro
+0000f670     3d9 (0000f640)     _att_a
+0000f676     3d9 (0000f640)     _acc_f
+
+0000f680     3da (0000f680)     _uwbvel
+0000f686     3da (0000f680)     _spd_set
+0000f68c     3da (0000f680)     _v_ctrl
+0000f692     3da (0000f680)     _spd_sett_
+0000f698     3da (0000f680)     _acc_set
+0000f69e     3da (0000f680)     _p_c
+0000f6a4     3da (0000f680)     _vel
+0000f6aa     3da (0000f680)     _pos_set
+0000f6b0     3da (0000f680)     _pos_r
+0000f6b6     3da (0000f680)     _pos4
+
+0000f6c0     3db (0000f6c0)     _uwbpos
+0000f6c6     3db (0000f6c0)     _pos3
+0000f6cc     3db (0000f6c0)     _pos
+0000f6d2     3db (0000f6c0)     _acc_bodyframe
+0000f6d8     3db (0000f6c0)     _pos2
+0000f6de     3db (0000f6c0)     _pos_zero
+0000f6e4     3db (0000f6c0)     _output
+0000f6ec     3db (0000f6c0)     _pwm
+0000f6f4     3db (0000f6c0)     _rcctrl
+
+0000f700     3dc (0000f700)     _cmdS
+0000f714     3dc (0000f700)     _cmdR
+
+0000f740     3dd (0000f740)     _aSelf
+
+0000f780     3de (0000f780)     _aRef
+
+0000f7c0     3df (0000f7c0)     _aNeighbors
+
+0000f800     3e0 (0000f800)     _msg
+
+0000f880     3e2 (0000f880)     _scdFlight
+
+0000f8f4     3e3 (0000f8c0)     _output_TLC
+0000f8f5     3e3 (0000f8c0)     _cnt_HQ7001
+0000f8f6     3e3 (0000f8c0)     _cnt_TLC
+0000f8f7     3e3 (0000f8c0)     _cRet
+0000f8f8     3e3 (0000f8c0)     _bSDExist
+0000f8f9     3e3 (0000f8c0)     _retSDEx
+0000f8fa     3e3 (0000f8c0)     _ret_HQ7001
+0000f8fb     3e3 (0000f8c0)     _iSD
+0000f8fc     3e3 (0000f8c0)     _cnt_SD
+0000f8fd     3e3 (0000f8c0)     _cnt_landing
+0000f8fe     3e3 (0000f8c0)     _cnt_idle
+0000f8ff     3e3 (0000f8c0)     _cnt_XS
+
+0000f900     3e4 (0000f900)     _triangle_y
+0000f902     3e4 (0000f900)     _triangle_x
+0000f904     3e4 (0000f900)     _sita_ori
+0000f906     3e4 (0000f900)     _sita_t
+0000f908     3e4 (0000f900)     _acce
+0000f90a     3e4 (0000f900)     _t_Traj
+0000f90c     3e4 (0000f900)     _disp
+0000f90e     3e4 (0000f900)     _length
+0000f910     3e4 (0000f900)     _vmax
+0000f912     3e4 (0000f900)     _w_sin
+0000f916     3e4 (0000f900)     _spd
+
+0000f940     3e5 (0000f940)     _traj_ab
+
+0000fa00     3e8 (0000fa00)     _traj_ref
+
+0000fac0     3eb (0000fac0)     _tmCom
+0000fac2     3eb (0000fac0)     _k21
+0000fac4     3eb (0000fac0)     _k12
+0000fac6     3eb (0000fac0)     _k22
+0000fac8     3eb (0000fac0)     _kv
+0000faca     3eb (0000fac0)     _Kp_Decent
+0000facc     3eb (0000fac0)     _offsetvx
+0000face     3eb (0000fac0)     _av
+0000fad8     3eb (0000fac0)     _c
+0000fada     3eb (0000fac0)     _periodT
+0000fadc     3eb (0000fac0)     _det_x
+0000fade     3eb (0000fac0)     _ax1
+0000fae0     3eb (0000fac0)     _det_y
+0000fae2     3eb (0000fac0)     _uy
+0000fae4     3eb (0000fac0)     _ux
+0000fae6     3eb (0000fac0)     _ax2
+0000fae8     3eb (0000fac0)     _k11
+0000faea     3eb (0000fac0)     _qlast
+0000faee     3eb (0000fac0)     _q
+0000faf2     3eb (0000fac0)     _vel_hat_r
+0000faf8     3eb (0000fac0)     _pos_hat_r
+
+0000fb00     3ec (0000fb00)     _res2
+0000fb06     3ec (0000fb00)     _res1
+0000fb0c     3ec (0000fb00)     _pos_hat_e_
+0000fb12     3ec (0000fb00)     _pos_f
+0000fb18     3ec (0000fb00)     _u
+0000fb1e     3ec (0000fb00)     _pos_hat_r_
+0000fb24     3ec (0000fb00)     _vel_f
+0000fb2a     3ec (0000fb00)     _vel_hat_r_
+0000fb30     3ec (0000fb00)     _f_hat
+0000fb36     3ec (0000fb00)     _vv_
+
+0000fb40     3ed (0000fb40)     _f_hat_
+0000fb46     3ed (0000fb40)     _pos_hat_e
+0000fb4c     3ed (0000fb40)     _vel_hat_e_
+0000fb52     3ed (0000fb40)     _vv
+0000fb58     3ed (0000fb40)     _vel_hat_e
+0000fb5e     3ed (0000fb40)     _uatt_0
+0000fb66     3ed (0000fb40)     _uatt_1
+0000fb6e     3ed (0000fb40)     _addrNeighbors
+0000fb7a     3ed (0000fb40)     __unlock
+0000fb7c     3ed (0000fb40)     __lock
+0000fb7e     3ed (0000fb40)     _errno
+
+0000fb80     3ee (0000fb80)     _cntUSoff
+0000fb81     3ee (0000fb80)     _cntUSjump
+0000fbbc     3ee (0000fb80)     _t_
+0000fbbe     3ee (0000fb80)     _diffvmax
+
+0000fbc0     3ef (0000fbc0)     _t
+0000fbda     3ef (0000fbc0)     _v_hat
+0000fbe0     3ef (0000fbc0)     _p_hat
+0000fbe6     3ef (0000fbc0)     _p_hat_
+0000fbec     3ef (0000fbc0)     _ep
+0000fbf2     3ef (0000fbc0)     _ev
+0000fbf8     3ef (0000fbc0)     _pi_
+
+0000fc00     3f0 (0000fc00)     _v_hat_
+0000fc06     3f0 (0000fc00)     _ag_
+0000fc0c     3f0 (0000fc00)     _vi_
+0000fc22     3f0 (0000fc00)     _bMS5803_On
+0000fc23     3f0 (0000fc00)     _cHigh
+0000fc24     3f0 (0000fc00)     _T_REF
+0000fc25     3f0 (0000fc00)     _TEMPSENS
+0000fc26     3f0 (0000fc00)     _TCO
+0000fc27     3f0 (0000fc00)     _iMS5803
+0000fc28     3f0 (0000fc00)     _retMS5803
+0000fc29     3f0 (0000fc00)     _bPrs
+0000fc2a     3f0 (0000fc00)     _bTemp
+0000fc2b     3f0 (0000fc00)     _cLow
+0000fc2c     3f0 (0000fc00)     _OFF_T1
+0000fc2d     3f0 (0000fc00)     _TCS
+0000fc2e     3f0 (0000fc00)     _SENS_T1
+0000fc30     3f0 (0000fc00)     _D1
+0000fc32     3f0 (0000fc00)     _TEMP
+0000fc34     3f0 (0000fc00)     _dT
+0000fc36     3f0 (0000fc00)     _D2
+0000fc38     3f0 (0000fc00)     _SENS
+0000fc3c     3f0 (0000fc00)     _OFF
+
+0000fc40     3f1 (0000fc40)     _CpuTimer1
+0000fc48     3f1 (0000fc40)     _CpuTimer2
+0000fc50     3f1 (0000fc40)     _CpuTimer0
+0000fc58     3f1 (0000fc40)     _iHMC
+0000fc59     3f1 (0000fc40)     _cnt_HMC
+0000fc5a     3f1 (0000fc40)     _retHMC
+0000fc5b     3f1 (0000fc40)     _MagZ
+0000fc5c     3f1 (0000fc40)     _MagX
+0000fc5d     3f1 (0000fc40)     _MagY
+0000fc5e     3f1 (0000fc40)     _Ratio_HMC
+0000fc60     3f1 (0000fc40)     _cmps_raw_
+0000fc63     3f1 (0000fc40)     _cmps_sum
+0000fc66     3f1 (0000fc40)     _bLeader
+0000fc68     3f1 (0000fc40)     _pos_leader
+0000fc6e     3f1 (0000fc40)     _vel_leader
+0000fc74     3f1 (0000fc40)     ___TI_cleanup_ptr
+0000fc76     3f1 (0000fc40)     ___TI_dtors_ptr
+
+0033fff8    cfff (0033ffc0)     _CsmPwl
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+0000f000   .bss
+00008000   .text
+0000d279   C$$EXIT
+0000cbee   FD$$ADD
+0000cd24   FD$$DIV
+0000ce37   FD$$MPY
+0000d2bc   FD$$SUB
+0000d15e   FD$$TOFS
+0000d208   FD$$TOL
+0000cdaf   FS$$DIV
+0000d244   FS$$TOFD
+0000d1a5   I$$DIV
+0000d1b6   I$$MOD
+0000d227   I$$TOFD
+0000d2a8   LL$$MPY
+0000d2ca   U$$DIV
+0000d2cf   U$$MOD
+0000bee9   _ADCINT_ISR
+00380080   _ADC_cal
+00008833   _AccFilter
+00000b00   _AdcMirror
+00007100   _AdcRegs
+0000c263   _AgentStates2Cmd
+0000846c   _Ascll2Float
+0000f0b2   _Atitude_zero
+00008707   _AttFilter
+0000e09e   _B_acc
+0000e0a4   _B_gyro
+0000f00b   _BiasGPS_X
+0000f00e   _BiasGPS_Y
+000086cf   _CalcAcc_bodyframe
+00008618   _CalcAtt_a
+0000f086   _Cfai_hat
+0000c31b   _Cmd2AgentStates
+0000c72f   _Cmd2Msg
+0000c214   _ComTimerReset
+0000c1eb   _ComTimerRun
+0000cefb   _ConfigCpuTimer
+000084f6   _ConvAcc
+00008533   _ConvGyro
+0000f0ba   _Cos_Latitude_zero
+0000fc50   _CpuTimer0
+00000c00   _CpuTimer0Regs
+0000fc40   _CpuTimer1
+00000c08   _CpuTimer1Regs
+0000fc48   _CpuTimer2
+00000c10   _CpuTimer2Regs
+0000f088   _Csita_hat
+0033fff8   _CsmPwl
+00000ae0   _CsmRegs
+0000ca20   _CsmUnlock
+0000fc30   _D1
+0000fc36   _D2
+0000be17   _DATALOG_ISR
+0000c00b   _DINTCH1_ISR
+0000c015   _DINTCH2_ISR
+0000c01f   _DINTCH3_ISR
+0000c029   _DINTCH4_ISR
+0000c033   _DINTCH5_ISR
+0000c03d   _DINTCH6_ISR
+0000d2e8   _DSP28x_usDelay
+0000e0d8   _DTIME_INNERLOOP
+0000c126   _DecentPosCtrl
+0000c1cd   _DecentPosCtrlReset
+00000880   _DevEmuRegs
+0000c96d   _DisableDog
+00001000   _DmaRegs
+0000e038   _Duty_New
+0000e040   _Duty_New_b
+0000c097   _ECAN0INTA_ISR
+0000c0ab   _ECAN0INTB_ISR
+0000c0a1   _ECAN1INTA_ISR
+0000c0b5   _ECAN1INTB_ISR
+0000bf7f   _ECAP1_INT_ISR
+0000bf89   _ECAP2_INT_ISR
+0000bf93   _ECAP3_INT_ISR
+0000bf9d   _ECAP4_INT_ISR
+0000bfa7   _ECAP5_INT_ISR
+0000bfb1   _ECAP6_INT_ISR
+00006040   _ECanaLAMRegs
+000060c0   _ECanaMOTORegs
+00006080   _ECanaMOTSRegs
+00006100   _ECanaMboxes
+00006000   _ECanaRegs
+00006240   _ECanbLAMRegs
+000062c0   _ECanbMOTORegs
+00006280   _ECanbMOTSRegs
+00006300   _ECanbMboxes
+00006200   _ECanbRegs
+00006a00   _ECap1Regs
+00006a20   _ECap2Regs
+00006a40   _ECap3Regs
+00006a60   _ECap4Regs
+00006a80   _ECap5Regs
+00006aa0   _ECap6Regs
+0000b773   _ECap_Init
+0000b65e   _ECap_PortConfig
+0000c105   _EMPTY_ISR
+0000be2b   _EMUINT_ISR
+0000bf43   _EPWM1_INT_ISR
+0000bf07   _EPWM1_TZINT_ISR
+0000bf4d   _EPWM2_INT_ISR
+0000bf11   _EPWM2_TZINT_ISR
+0000bf57   _EPWM3_INT_ISR
+0000bf1b   _EPWM3_TZINT_ISR
+0000bf61   _EPWM4_INT_ISR
+0000bf25   _EPWM4_TZINT_ISR
+0000bf6b   _EPWM5_INT_ISR
+0000bf2f   _EPWM5_TZINT_ISR
+0000bf75   _EPWM6_INT_ISR
+0000bf39   _EPWM6_TZINT_ISR
+00006800   _EPwm1Regs
+00006840   _EPwm2Regs
+00006880   _EPwm3Regs
+000068c0   _EPwm4Regs
+00006900   _EPwm5Regs
+00006940   _EPwm6Regs
+0000bfbb   _EQEP1_INT_ISR
+0000bfc5   _EQEP2_INT_ISR
+00006b00   _EQep1Regs
+00006b40   _EQep2Regs
+0000d155   _EnableInterrupts
+0000f5c4   _FLAG_HeightFliter
+0000ada3   _FilterReset_2o
+0000ad04   _FilterRun_2o
+0000891d   _Filter_1LP
+00008154   _Filter_1LPV
+0000f01a   _FlagSetHP
+0000f5cd   _FlagYawRun
+00000a80   _FlashRegs
+00009cfd   _FlightScdCmd
+00009d37   _FlightScdDesign
+00009ccc   _FlightScdRun
+0000f2c0   _GPS
+00008e27   _GPSPacketClean
+00008aa3   _GPSPacketRead
+00008a8c   _GPSPacketReady
+0000f540   _GPSstring
+000084be   _GetAccRaw
+0000c6ce   _GetCmd
+0000c809   _GetCmdType
+00008e1e   _GetGPSGSpeed
+00008dae   _GetGPSNSV
+00008cd4   _GetGPSPosition
+00008d9b   _GetGPSSpeed
+00008d5b   _GetGPSSpeed_V4
+00008e0a   _GetGPSTime
+00008e15   _GetGPSTrack
+000084d4   _GetGyroRaw
+00008f3f   _GetHeightURM37
+00008ec9   _GetRC
+0000a38d   _GetSetValue
+0000a35d   _GetSetValue_Yaw
+00009260   _GetThrottle
+00006f80   _GpioCtrlRegs
+00006fc0   _GpioDataRegs
+00006fe0   _GpioIntRegs
+00008607   _GyroFilter
+0000b6f0   _HMC5983_PortConfig
+0000e0eb   _HMCCOUNTbegin
+0000e0ea   _HMCCOUNTend
+0000c46e   _HMC_CalcMag
+0000c3e4   _HMC_Init
+0000c425   _HMC_ReadMag
+0000c5ba   _HMC_WR
+0000c613   _HMC_WR0
+0000f603   _HMC_raw
+0000e0ec   _HMC_threshold
+0000b9a1   _HQ7001_Ex
+0000b9df   _HQ7001_Get
+0000b710   _HQ7001_Init
+0000b694   _HQ7001_PortConfig
+0000b567   _Hardware_Init
+0000adbc   _HeightFilter
+0000af18   _HeightFilterGPS
+0000af13   _HeightFilter_GetBiasA
+0000f028   _Height_URM37
+0000c047   _I2CINT1A_ISR
+0000c051   _I2CINT2A_ISR
+00007900   _I2caRegs
+0000be3f   _ILLEGAL_ISR
+0000be03   _INT13_ISR
+0000be0d   _INT14_ISR
+0000e048   _INTG_POS_SAT
+0000bb13   _ISRSciRxAFifo
+0000bb53   _ISRSciRxCFifo
+0000bae0   _ISRSciTxCFifo
+0000afdc   _ISRTimer0
+0000ceba   _InitCpuTimers
+0000c948   _InitFlash
+0000c9c5   _InitPeripheralClocks
+0000d136   _InitPieCtrl
+0000d1e8   _InitPieVectTable
+0000c975   _InitPll
+0000c93f   _InitSysCtrl
+0000cd01   _InterruptsEnable
+00009254   _IsAutoMode
+0000c811   _IsMsgEmpty
+00008ebe   _IsMsgReady
+00008a82   _IsSendOK
+0000f02e   _KLati2Meter
+0000f02c   _KLong2Meter
+0000e0aa   _K_acc
+0000e0b0   _K_gyro
+0000f090   _Kd_x
+0000f078   _Kd_y
+0000f080   _Kd_z
+0000e092   _Kha
+0000e096   _Khba
+0000e094   _Khv
+0000f07e   _Ki_x
+0000f08c   _Ki_y
+0000f072   _Ki_z
+0000e0de   _KitoVel
+0000faca   _Kp_Decent
+0000f030   _Kp_x
+0000f05a   _Kp_y
+0000f082   _Kp_z
+0000c0fb   _LUF_ISR
+0000c0f1   _LVF_ISR
+0000f0c4   _Latitude_zero
+0000f0c0   _Longitude_zero
+0000e03c   _MAGNETIC_VARIATION
+0000e0b6   _MAG_OFFSET
+0000e0bc   _MAG_SCALE
+0000e01e   _MEANCYCLE
+0000bff7   _MRINTA_ISR
+0000bfe3   _MRINTB_ISR
+0000b6d0   _MS5803_PortConfig
+0000c001   _MXINTA_ISR
+0000bfed   _MXINTB_ISR
+00008890   _MagFilter
+0000fc5c   _MagX
+0000fc5d   _MagY
+0000fc5b   _MagZ
+00005000   _McbspaRegs
+00005040   _McbspbRegs
+0000c6b3   _MsgAppendAddFrame
+0000c649   _MsgAppendFrame
+00008974   _MsgAppend_byte
+00008986   _MsgAppend_float
+000089fd   _MsgAppend_int
+000089c0   _MsgAppend_rad
+0000c642   _MsgReset
+00008a27   _MsgSend
+0000c627   _MsgSetDest
+0000c634   _MsgSetSrc
+0000be35   _NMI_ISR
+0000fc3c   _OFF
+0000fc2c   _OFF_T1
+0000c112   _PIE_RESERVED
+0000e0d4   _PITCH_SAT
+0000e026   _PULSE_MAX
+0000e028   _PULSE_MIN
+0000b85f   _PWM_Init
+0000b63c   _PWM_PortConfig
+00008017   _PWMset
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+0000df1e   _PieVectTableInit
+0000ccd3   _PieVectTableRegister
+0000aa24   _PosFilter
+0000ca51   _PsaiMdf
+0000bc0e   _RC1_ISR
+0000bc6b   _RC2_ISR
+0000bb93   _RC3_ISR
+0000bcc8   _RC4_ISR
+0000bd25   _RC6_ISR
+00008f89   _RCAttSet
+0000f054   _RCInput
+0000907f   _RCPosSet
+000091f8   _RCYawSet
+0000f052   _RC_alfa
+0000f198   _RC_width
+0000f61c   _RCacc_set
+0000e0c2   _RCinputDZ
+0000f0ae   _RCinputSM
+0000f60c   _RCpos_set
+0000f620   _RCspd_set
+0000be21   _RTOSINT_ISR
+0000f005   _RX_Count
+0000fc5e   _Ratio_HMC
+0000c06f   _SCIRXINTA_ISR
+0000c083   _SCIRXINTB_ISR
+0000c05b   _SCIRXINTC_ISR
+0000ba8c   _SCIRXINTb_ISR
+0000c079   _SCITXINTA_ISR
+0000c08d   _SCITXINTB_ISR
+0000c065   _SCITXINTC_ISR
+00009c88   _SDBufAppend_buflen
+00009bd6   _SDBufAppend_float
+00009bfd   _SDBufAppend_float2
+00009bba   _SDBufAppend_int
+00009c42   _SDBufAppend_rad
+00009c72   _SDBufAppend_zeros
+00009b9a   _SDBufReset
+0000ba5a   _SD_Ex
+0000b8dd   _SD_Init
+0000b6b2   _SD_PortConfig
+00009a6e   _SD_ReadBlock
+00009b71   _SD_SetStartSector
+00009ad7   _SD_WriteBlock
+0000ec00   _SD_buffer
+0000fc38   _SENS
+0000fc2e   _SENS_T1
+0000bec1   _SEQ1INT_ISR
+0000becb   _SEQ2INT_ISR
+0000bfcf   _SPIRXINTA_ISR
+0000bfd9   _SPITXINTA_ISR
+0000ca98   _Saturation
+00007050   _SciaRegs
+0000b72b   _Scia_Init
+0000b5fa   _Scia_PortConfig
+0000ba0c   _Scia_Xmit
+0000ba32   _Scia_msg
+00007750   _ScibRegs
+0000b744   _Scib_Init
+0000b60e   _Scib_PortConfig
+0000ba19   _Scib_Xmit
+00007770   _ScicRegs
+0000b756   _Scic_Init
+0000b622   _Scic_PortConfig
+0000ba25   _Scic_Xmit
+0000ba46   _Scic_msg
+0000f07a   _Sector_buffer
+0000c963   _ServiceDog
+0000c235   _SetAgent
+000092a3   _SetCtrlPara
+00009426   _SetDestPos
+00009d66   _SetInitPoint
+00009f0a   _SetNextPoint
+00009c98   _SetVar
+00009289   _SetVector
+0000c221   _Set_offV
+0000f08a   _Sfai_hat
+0000a8fa   _SpdFilterUWB
+0000a96b   _SpdFilterUWB2
+00007040   _SpiaRegs
+00007010   _SysCtrlRegs
+0000b5a0   _TB6612_Portconfig
+0000fc26   _TCO
+0000fc2d   _TCS
+0000fc32   _TEMP
+0000fc25   _TEMPSENS
+0000bef3   _TINT0_ISR
+0000b5d0   _TLC2543_PortConfig
+0000b957   _TLC2543_Read
+0000fc24   _T_REF
+0000a144   _TrackReset
+0000a0fd   _TrackReset_V4
+0000a1a3   _TrackSet
+0000a1fc   _Traj_Tangential
+0000f050   _Ts_pitch
+0000f04c   _Ts_roll
+0000f04e   _Ts_yaw
+0000f084   _Tsita_hat
+0000f040   _U2
+0000f044   _U2_
+0000e030   _U2_sat
+0000f046   _U2d
+0000e02c   _U2d_sat
+0000f03c   _U2i
+0000e024   _U2i_sat
+0000f04a   _U3
+0000f042   _U3_
+0000e034   _U3_sat
+0000f036   _U3d
+0000e02a   _U3d_sat
+0000f03a   _U3i
+0000e022   _U3i_sat
+0000f056   _U4
+0000f03e   _U4_
+0000e032   _U4_sat
+0000f038   _U4d
+0000e02e   _U4d_sat
+0000f048   _U4i
+0000e020   _U4i_sat
+0000b8a8   _URM37_Init
+0000b654   _URM37_PortConfig
+00008f48   _URM_Trigger
+0000bea3   _USER10_ISR
+0000bead   _USER11_ISR
+0000beb7   _USER12_ISR
+0000be49   _USER1_ISR
+0000be53   _USER2_ISR
+0000be5d   _USER3_ISR
+0000be67   _USER4_ISR
+0000be71   _USER5_ISR
+0000be7b   _USER6_ISR
+0000be85   _USER7_ISR
+0000be8f   _USER8_ISR
+0000be99   _USER9_ISR
+0000bd82   _USonic_ISR
+0000f224   _UWB
+000081b1   _UWBDataAppend
+000081e2   _UWBPacketRead
+000081c8   _UWBPacketReady
+0000f300   _UWBRxBuffer
+0000f5dc   _UWB_angle
+0000f0ee   _Uout_V4plus
+0000f0e2   _Uout_V4plus_
+0000f0e8   _Uout_gyro
+0000f0dc   _Uout_gyro_
+0000cab4   _VectorSub
+0000befd   _WAKEINT_ISR
+00008e2b   _WirelessDataAppend
+0000f280   _Wirelessstring
+00009b53   _WriteNextBlock
+0000bed5   _XINT1_ISR
+0000bedf   _XINT2_ISR
+0000c0bf   _XINT3_ISR
+0000c0c9   _XINT4_ISR
+0000c0d3   _XINT5_ISR
+0000c0dd   _XINT6_ISR
+0000c0e7   _XINT7_ISR
+00007070   _XIntruptRegs
+0000c7fc   _XORCheck
+00000b20   _XintfRegs
+0000c7e6   _XorSum
+0000f5ce   _YawSpinRun
+00008a7c   _ZigbeeResetAddress
+00008a4f   _ZigbeeSend
+00000300   __STACK_END
+00000300   __STACK_SIZE
+00000001   __TI_args_main
+0000fc74   ___TI_cleanup_ptr
+0000fc76   ___TI_dtors_ptr
+ffffffff   ___binit__
+0000f000   ___bss__
+ffffffff   ___c_args__
+0000d2f0   ___cinit__
+0000f000   ___end__
+0000d2f0   ___etext__
+0000d1c7   ___memcpy_ff
+ffffffff   ___pinit__
+00008000   ___text__
+0000d260   __args_main
+0000de1c   __ctypes_
+0000fb7c   __lock
+0000d2e7   __nop
+0000d2e3   __register_lock
+0000d2df   __register_unlock
+00000000   __stack
+0000fb7a   __unlock
+0000f7c0   _aNeighbors
+0000f780   _aRef
+0000f740   _aSelf
+0000d279   _abort
+0000f658   _acc
+0000f1b0   _acc_0
+0000f1d8   _acc_1
+0000f1cc   _acc_2
+0000f6d2   _acc_bodyframe
+0000f676   _acc_f
+0000f606   _acc_raw
+0000f698   _acc_set
+0000f908   _acce
+0000f032   _accx_feed
+0000f02a   _accx_feed_
+0000f034   _accy_feed
+0000f026   _accy_feed_
+0000f5c0   _ack
+0000fb6e   _addrNeighbors
+0000e0e2   _addr_server
+0000fc06   _ag_
+0000f058   _anglenow
+0000f4c0   _arraySchedule
+0000cf36   _atan
+0000cb2a   _atan2
+0000d2ec   _atof
+0000d105   _atoi
+0000f630   _att
+0000f636   _att2
+0000f156   _att_0
+0000f14e   _att_1
+0000f670   _att_a
+0000f5e2   _att_error
+0000f106   _att_hat
+0000f624   _att_set
+0000f0b6   _att_set_NAV
+0000f0d6   _att_set_V4
+0000f5da   _att_zero
+0000face   _av
+0000fade   _ax1
+0000fae6   _ax2
+0000f5cf   _bAutoMode
+0000f5ca   _bGPSUpdate
+0000f5cb   _bGPSnormal
+0000f5c7   _bInitializing
+0000fc66   _bLeader
+0000fc22   _bMS5803_On
+0000fc29   _bPrs
+0000f018   _bRC6high
+0000f8f8   _bSDExist
+0000f017   _bShutdown
+0000f5cc   _bStatus
+0000fc2a   _bTemp
+0000f007   _bThroOff
+0000f001   _bTurnAuto
+0000f002   _bUSIdle
+0000f5c9   _bUWBUpdate
+0000f340   _b_send
+0000f06e   _basicOut
+0000e042   _basicOutFly
+0000e044   _basicOutGround
+0000e090   _biasGravity
+0000f06c   _bufI32
+0000f0fa   _buf_Acc
+0000fad8   _c
+0000fc23   _cHigh
+0000fc2b   _cLow
+0000f8f7   _cRet
+0000d0bf   _c_int00
+003052f0   _cinit_loadstart
+0000d2f0   _cinit_runstart
+00000b2c   _cinit_size
+0000f714   _cmdR
+0000f700   _cmdS
+0000f609   _cmps_raw
+0000fc60   _cmps_raw_
+0000fc63   _cmps_sum
+0000fb81   _cntUSjump
+0000fb80   _cntUSoff
+0000f003   _cnt_CG
+0000f014   _cnt_GPS
+0000f016   _cnt_GRC
+0000fc59   _cnt_HMC
+0000f8f5   _cnt_HQ7001
+0000f012   _cnt_MA
+0000f015   _cnt_RC6
+0000f8fc   _cnt_SD
+0000f022   _cnt_SDBA
+0000f006   _cnt_SDR
+0000f020   _cnt_SDW
+0000f00a   _cnt_SV
+0000f8f6   _cnt_TLC
+0000f000   _cnt_URMTrigger
+0000f8ff   _cnt_XS
+0000f00c   _cnt_comma
+0000f8fe   _cnt_idle
+0000f8fd   _cnt_landing
+0000f5d1   _com_period_formation
+0000f5d2   _com_period_report
+00008000   _const_loadstart
+00008000   _const_runstart
+00000000   _const_size
+0000cfa5   _cos
+0000f01b   _countHomePoint
+0000fc34   _dT
+0000f10c   _d_att
+0000f11e   _d_att_hat
+0000f00d   _data_temp
+0000f01f   _debugonly
+0000ca85   _deg2rad
+0000fadc   _det_x
+0000fae0   _det_y
+0000fbbe   _diffvmax
+0000f90c   _disp
+00305e1c   _econst_loadstart
+0000de1c   _econst_runstart
+000002d4   _econst_size
+0000fbec   _ep
+0000e0e6   _errYaw
+0000f060   _err_height
+0000f064   _err_height_
+0000f096   _err_pitch
+0000f0a2   _err_pitch_f
+0000f09a   _err_roll
+0000f0a6   _err_roll_f
+0000f062   _err_vheight
+0000f05e   _err_vheight_
+0000f09e   _err_yaw
+0000f0aa   _err_yaw_f
+0000fb7e   _errno
+0000fbf2   _ev
+0000d27b   _exit
+0000f130   _f
+0000e04a   _fACC
+0000e0d6   _fATTSET
+0000e036   _fGYRO
+0000e046   _fMag
+0000fb30   _f_hat
+0000fb40   _f_hat_
+0000cb20   _fabs
+0000f07c   _flp_temp
+0000d292   _frexp
+0000f614   _fsm
+0000f124   _g
+0000f66a   _gyro
+0000f1c0   _gyro_0
+0000f15e   _gyro_1
+0000f16a   _gyro_2
+0000f0d0   _gyro_V4
+0000f112   _gyro_bias
+0000f118   _gyro_bias_sum
+0000f600   _gyro_raw
+0000f5de   _height
+0000f05c   _height_
+0000f0f4   _homepoint
+0000fc58   _iHMC
+0000fc27   _iMS5803
+0000f5c2   _iNeighbors
+0000f8fb   _iSD
+0000f5c3   _i_w
+0000f076   _intgX
+0000f074   _intgY
+0000f06a   _intg_height
+0000f00f   _isSure
+0000f008   _isTakeOff
+0000fae8   _k11
+0000fac4   _k12
+0000fac2   _k21
+0000fac6   _k22
+0000fac8   _kv
+0000f021   _lenBuffer
+0000f011   _lenGPS
+0000f01e   _lenWRL
+0000f90e   _length
+0000f664   _mag
+0000f18c   _mag_0
+0000f180   _mag_1
+0000f1a4   _mag_2
+0000cc8a   _main
+0000e0e8   _minyawstep
+0000f800   _msg
+0000f5f2   _msgR
+0000f3c0   _msgRead
+0000f440   _msgRecv
+0000f652   _n
+0000f5d0   _nsvGPS
+0000f024   _offBufHead
+0000f025   _offBufTail
+0000facc   _offsetvx
+0000f6e4   _output
+0000f8f4   _output_TLC
+0000f240   _pComma
+0000f013   _pHead
+0000f010   _pTail
+0000f023   _pWrite
+0000f69e   _p_c
+0000fbe0   _p_hat
+0000fbe6   _p_hat_
+0000f092   _pdX
+0000f094   _pdY
+0000fada   _periodT
+0000e03e   _pi
+0000fbf8   _pi_
+00008000   _pinit_loadstart
+00008000   _pinit_runstart
+00000000   _pinit_size
+0000f254   _point_set
+0000f6cc   _pos
+0000f0cc   _pos1_set
+0000f6d8   _pos2
+0000f6c6   _pos3
+0000f6b6   _pos4
+0000f62a   _posGPS
+0000f100   _posGPS_
+0000fb12   _pos_f
+0000fb46   _pos_hat_e
+0000fb0c   _pos_hat_e_
+0000faf8   _pos_hat_r
+0000fb1e   _pos_hat_r_
+0000fc68   _pos_leader
+0000f6b0   _pos_r
+0000f6aa   _pos_set
+0000f6de   _pos_zero
+0000f5fc   _pres
+0000f5c6   _pres_biased
+0000f6ec   _pwm
+0000f610   _pwm_i
+0000faee   _q
+0000faea   _qlast
+0000ca78   _rad2deg
+0000f12a   _rc_att_out
+0000f136   _rc_att_u_
+0000f212   _rc_att_z
+0000f200   _rc_att_z_
+0000f6f4   _rcctrl
+0000f1e4   _rdataA
+0000f01d   _rec_Scia
+0000f004   _rec_Scib
+0000f01c   _rec_Scic
+0000fb06   _res1
+0000fb00   _res2
+0000fc5a   _retHMC
+0000fc28   _retMS5803
+0000f019   _retSD
+0000f8f9   _retSDEx
+0000f8fa   _ret_HQ7001
+0000c11c   _rsvd_ISR
+0000f880   _scdFlight
+0000f5e6   _sectorSD
+0000f5c5   _sendType
+0000f140   _sensitivity
+0000cafc   _sign
+0000cada   _signcyc
+0000d067   _sin
+0000f904   _sita_ori
+0000f906   _sita_t
+0000f916   _spd
+0000f686   _spd_set
+0000f692   _spd_sett_
+0000cb17   _sqr
+0000d182   _sqrt
+0000f146   _strZigbeeResetAddr
+0000d2d5   _strcmp
+0000c81c   _strtod
+0000f5c1   _swarmflag
+003060f0   _switch_loadstart
+0000e0f0   _switch_runstart
+00000024   _switch_size
+0000fbc0   _t
+0000f5f6   _t0
+0000f5ee   _tGPS_0
+0000f5ec   _tGPS_1
+0000fbbc   _t_
+0000f90a   _t_Traj
+0000f066   _t_error
+0000d006   _tan
+0000f5f8   _tempa
+00300000   _text_loadstart
+00008000   _text_runstart
+000052f0   _text_size
+0000f618   _timeGPS
+0000f009   _time_count_UWB
+0000f5d4   _time_zero
+0000f5c8   _timer_count
+0000fac0   _tmCom
+0000f940   _traj_ab
+0000fa00   _traj_ref
+0000f902   _triangle_x
+0000f900   _triangle_y
+0000f070   _tv
+0000fb18   _u
+0000fb5e   _uatt_0
+0000fb66   _uatt_1
+0000f65e   _ure
+0000f6c0   _uwbpos
+0000f680   _uwbvel
+0000fae4   _ux
+0000fae2   _uy
+0000f646   _vGPS
+0000f640   _vGPS_dif
+0000f64c   _vGPS_ori
+0000f5e0   _vHeight
+0000f08e   _vTemp
+0000f68c   _v_ctrl
+0000fbda   _v_hat
+0000fc00   _v_hat_
+0000f6a4   _vel
+0000f0c8   _vel1_set
+0000fb24   _vel_f
+0000fb58   _vel_hat_e
+0000fb4c   _vel_hat_e_
+0000faf2   _vel_hat_r
+0000fb2a   _vel_hat_r_
+0000fc6e   _vel_leader
+0000f068   _vheight_
+0000fc0c   _vi_
+0000f910   _vmax
+0000fb52   _vv
+0000fb36   _vv_
+0000f5d6   _w
+0000f5e4   _w1
+0000f5ea   _w2
+0000f5e8   _w3
+0000f5f4   _w4
+0000f5d8   _w_all
+0000e0ee   _w_sat
+0000f912   _w_sin
+0000f5f0   _w_wheel
+0000f5fa   _yaw
+ffffffff   binit
+0000d2f0   cinit
+0033fff6   code_start
+00338000   copy_sections
+0000f000   end
+0000d2f0   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   __stack
+00000000   _const_size
+00000000   _pinit_size
+00000001   __TI_args_main
+00000024   _switch_size
+000002d4   _econst_size
+00000300   __STACK_END
+00000300   __STACK_SIZE
+00000880   _DevEmuRegs
+00000a80   _FlashRegs
+00000ae0   _CsmRegs
+00000b00   _AdcMirror
+00000b20   _XintfRegs
+00000b2c   _cinit_size
+00000c00   _CpuTimer0Regs
+00000c08   _CpuTimer1Regs
+00000c10   _CpuTimer2Regs
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+00001000   _DmaRegs
+00005000   _McbspaRegs
+00005040   _McbspbRegs
+000052f0   _text_size
+00006000   _ECanaRegs
+00006040   _ECanaLAMRegs
+00006080   _ECanaMOTSRegs
+000060c0   _ECanaMOTORegs
+00006100   _ECanaMboxes
+00006200   _ECanbRegs
+00006240   _ECanbLAMRegs
+00006280   _ECanbMOTSRegs
+000062c0   _ECanbMOTORegs
+00006300   _ECanbMboxes
+00006800   _EPwm1Regs
+00006840   _EPwm2Regs
+00006880   _EPwm3Regs
+000068c0   _EPwm4Regs
+00006900   _EPwm5Regs
+00006940   _EPwm6Regs
+00006a00   _ECap1Regs
+00006a20   _ECap2Regs
+00006a40   _ECap3Regs
+00006a60   _ECap4Regs
+00006a80   _ECap5Regs
+00006aa0   _ECap6Regs
+00006b00   _EQep1Regs
+00006b40   _EQep2Regs
+00006f80   _GpioCtrlRegs
+00006fc0   _GpioDataRegs
+00006fe0   _GpioIntRegs
+00007010   _SysCtrlRegs
+00007040   _SpiaRegs
+00007050   _SciaRegs
+00007070   _XIntruptRegs
+00007100   _AdcRegs
+00007750   _ScibRegs
+00007770   _ScicRegs
+00007900   _I2caRegs
+00008000   .text
+00008000   ___text__
+00008000   _const_loadstart
+00008000   _const_runstart
+00008000   _pinit_loadstart
+00008000   _pinit_runstart
+00008000   _text_runstart
+00008017   _PWMset
+00008154   _Filter_1LPV
+000081b1   _UWBDataAppend
+000081c8   _UWBPacketReady
+000081e2   _UWBPacketRead
+0000846c   _Ascll2Float
+000084be   _GetAccRaw
+000084d4   _GetGyroRaw
+000084f6   _ConvAcc
+00008533   _ConvGyro
+00008607   _GyroFilter
+00008618   _CalcAtt_a
+000086cf   _CalcAcc_bodyframe
+00008707   _AttFilter
+00008833   _AccFilter
+00008890   _MagFilter
+0000891d   _Filter_1LP
+00008974   _MsgAppend_byte
+00008986   _MsgAppend_float
+000089c0   _MsgAppend_rad
+000089fd   _MsgAppend_int
+00008a27   _MsgSend
+00008a4f   _ZigbeeSend
+00008a7c   _ZigbeeResetAddress
+00008a82   _IsSendOK
+00008a8c   _GPSPacketReady
+00008aa3   _GPSPacketRead
+00008cd4   _GetGPSPosition
+00008d5b   _GetGPSSpeed_V4
+00008d9b   _GetGPSSpeed
+00008dae   _GetGPSNSV
+00008e0a   _GetGPSTime
+00008e15   _GetGPSTrack
+00008e1e   _GetGPSGSpeed
+00008e27   _GPSPacketClean
+00008e2b   _WirelessDataAppend
+00008ebe   _IsMsgReady
+00008ec9   _GetRC
+00008f3f   _GetHeightURM37
+00008f48   _URM_Trigger
+00008f89   _RCAttSet
+0000907f   _RCPosSet
+000091f8   _RCYawSet
+00009254   _IsAutoMode
+00009260   _GetThrottle
+00009289   _SetVector
+000092a3   _SetCtrlPara
+00009426   _SetDestPos
+00009a6e   _SD_ReadBlock
+00009ad7   _SD_WriteBlock
+00009b53   _WriteNextBlock
+00009b71   _SD_SetStartSector
+00009b9a   _SDBufReset
+00009bba   _SDBufAppend_int
+00009bd6   _SDBufAppend_float
+00009bfd   _SDBufAppend_float2
+00009c42   _SDBufAppend_rad
+00009c72   _SDBufAppend_zeros
+00009c88   _SDBufAppend_buflen
+00009c98   _SetVar
+00009ccc   _FlightScdRun
+00009cfd   _FlightScdCmd
+00009d37   _FlightScdDesign
+00009d66   _SetInitPoint
+00009f0a   _SetNextPoint
+0000a0fd   _TrackReset_V4
+0000a144   _TrackReset
+0000a1a3   _TrackSet
+0000a1fc   _Traj_Tangential
+0000a35d   _GetSetValue_Yaw
+0000a38d   _GetSetValue
+0000a8fa   _SpdFilterUWB
+0000a96b   _SpdFilterUWB2
+0000aa24   _PosFilter
+0000ad04   _FilterRun_2o
+0000ada3   _FilterReset_2o
+0000adbc   _HeightFilter
+0000af13   _HeightFilter_GetBiasA
+0000af18   _HeightFilterGPS
+0000afdc   _ISRTimer0
+0000b567   _Hardware_Init
+0000b5a0   _TB6612_Portconfig
+0000b5d0   _TLC2543_PortConfig
+0000b5fa   _Scia_PortConfig
+0000b60e   _Scib_PortConfig
+0000b622   _Scic_PortConfig
+0000b63c   _PWM_PortConfig
+0000b654   _URM37_PortConfig
+0000b65e   _ECap_PortConfig
+0000b694   _HQ7001_PortConfig
+0000b6b2   _SD_PortConfig
+0000b6d0   _MS5803_PortConfig
+0000b6f0   _HMC5983_PortConfig
+0000b710   _HQ7001_Init
+0000b72b   _Scia_Init
+0000b744   _Scib_Init
+0000b756   _Scic_Init
+0000b773   _ECap_Init
+0000b85f   _PWM_Init
+0000b8a8   _URM37_Init
+0000b8dd   _SD_Init
+0000b957   _TLC2543_Read
+0000b9a1   _HQ7001_Ex
+0000b9df   _HQ7001_Get
+0000ba0c   _Scia_Xmit
+0000ba19   _Scib_Xmit
+0000ba25   _Scic_Xmit
+0000ba32   _Scia_msg
+0000ba46   _Scic_msg
+0000ba5a   _SD_Ex
+0000ba8c   _SCIRXINTb_ISR
+0000bae0   _ISRSciTxCFifo
+0000bb13   _ISRSciRxAFifo
+0000bb53   _ISRSciRxCFifo
+0000bb93   _RC3_ISR
+0000bc0e   _RC1_ISR
+0000bc6b   _RC2_ISR
+0000bcc8   _RC4_ISR
+0000bd25   _RC6_ISR
+0000bd82   _USonic_ISR
+0000be03   _INT13_ISR
+0000be0d   _INT14_ISR
+0000be17   _DATALOG_ISR
+0000be21   _RTOSINT_ISR
+0000be2b   _EMUINT_ISR
+0000be35   _NMI_ISR
+0000be3f   _ILLEGAL_ISR
+0000be49   _USER1_ISR
+0000be53   _USER2_ISR
+0000be5d   _USER3_ISR
+0000be67   _USER4_ISR
+0000be71   _USER5_ISR
+0000be7b   _USER6_ISR
+0000be85   _USER7_ISR
+0000be8f   _USER8_ISR
+0000be99   _USER9_ISR
+0000bea3   _USER10_ISR
+0000bead   _USER11_ISR
+0000beb7   _USER12_ISR
+0000bec1   _SEQ1INT_ISR
+0000becb   _SEQ2INT_ISR
+0000bed5   _XINT1_ISR
+0000bedf   _XINT2_ISR
+0000bee9   _ADCINT_ISR
+0000bef3   _TINT0_ISR
+0000befd   _WAKEINT_ISR
+0000bf07   _EPWM1_TZINT_ISR
+0000bf11   _EPWM2_TZINT_ISR
+0000bf1b   _EPWM3_TZINT_ISR
+0000bf25   _EPWM4_TZINT_ISR
+0000bf2f   _EPWM5_TZINT_ISR
+0000bf39   _EPWM6_TZINT_ISR
+0000bf43   _EPWM1_INT_ISR
+0000bf4d   _EPWM2_INT_ISR
+0000bf57   _EPWM3_INT_ISR
+0000bf61   _EPWM4_INT_ISR
+0000bf6b   _EPWM5_INT_ISR
+0000bf75   _EPWM6_INT_ISR
+0000bf7f   _ECAP1_INT_ISR
+0000bf89   _ECAP2_INT_ISR
+0000bf93   _ECAP3_INT_ISR
+0000bf9d   _ECAP4_INT_ISR
+0000bfa7   _ECAP5_INT_ISR
+0000bfb1   _ECAP6_INT_ISR
+0000bfbb   _EQEP1_INT_ISR
+0000bfc5   _EQEP2_INT_ISR
+0000bfcf   _SPIRXINTA_ISR
+0000bfd9   _SPITXINTA_ISR
+0000bfe3   _MRINTB_ISR
+0000bfed   _MXINTB_ISR
+0000bff7   _MRINTA_ISR
+0000c001   _MXINTA_ISR
+0000c00b   _DINTCH1_ISR
+0000c015   _DINTCH2_ISR
+0000c01f   _DINTCH3_ISR
+0000c029   _DINTCH4_ISR
+0000c033   _DINTCH5_ISR
+0000c03d   _DINTCH6_ISR
+0000c047   _I2CINT1A_ISR
+0000c051   _I2CINT2A_ISR
+0000c05b   _SCIRXINTC_ISR
+0000c065   _SCITXINTC_ISR
+0000c06f   _SCIRXINTA_ISR
+0000c079   _SCITXINTA_ISR
+0000c083   _SCIRXINTB_ISR
+0000c08d   _SCITXINTB_ISR
+0000c097   _ECAN0INTA_ISR
+0000c0a1   _ECAN1INTA_ISR
+0000c0ab   _ECAN0INTB_ISR
+0000c0b5   _ECAN1INTB_ISR
+0000c0bf   _XINT3_ISR
+0000c0c9   _XINT4_ISR
+0000c0d3   _XINT5_ISR
+0000c0dd   _XINT6_ISR
+0000c0e7   _XINT7_ISR
+0000c0f1   _LVF_ISR
+0000c0fb   _LUF_ISR
+0000c105   _EMPTY_ISR
+0000c112   _PIE_RESERVED
+0000c11c   _rsvd_ISR
+0000c126   _DecentPosCtrl
+0000c1cd   _DecentPosCtrlReset
+0000c1eb   _ComTimerRun
+0000c214   _ComTimerReset
+0000c221   _Set_offV
+0000c235   _SetAgent
+0000c263   _AgentStates2Cmd
+0000c31b   _Cmd2AgentStates
+0000c3e4   _HMC_Init
+0000c425   _HMC_ReadMag
+0000c46e   _HMC_CalcMag
+0000c5ba   _HMC_WR
+0000c613   _HMC_WR0
+0000c627   _MsgSetDest
+0000c634   _MsgSetSrc
+0000c642   _MsgReset
+0000c649   _MsgAppendFrame
+0000c6b3   _MsgAppendAddFrame
+0000c6ce   _GetCmd
+0000c72f   _Cmd2Msg
+0000c7e6   _XorSum
+0000c7fc   _XORCheck
+0000c809   _GetCmdType
+0000c811   _IsMsgEmpty
+0000c81c   _strtod
+0000c93f   _InitSysCtrl
+0000c948   _InitFlash
+0000c963   _ServiceDog
+0000c96d   _DisableDog
+0000c975   _InitPll
+0000c9c5   _InitPeripheralClocks
+0000ca20   _CsmUnlock
+0000ca51   _PsaiMdf
+0000ca78   _rad2deg
+0000ca85   _deg2rad
+0000ca98   _Saturation
+0000cab4   _VectorSub
+0000cada   _signcyc
+0000cafc   _sign
+0000cb17   _sqr
+0000cb20   _fabs
+0000cb2a   _atan2
+0000cbee   FD$$ADD
+0000cc8a   _main
+0000ccd3   _PieVectTableRegister
+0000cd01   _InterruptsEnable
+0000cd24   FD$$DIV
+0000cdaf   FS$$DIV
+0000ce37   FD$$MPY
+0000ceba   _InitCpuTimers
+0000cefb   _ConfigCpuTimer
+0000cf36   _atan
+0000cfa5   _cos
+0000d006   _tan
+0000d067   _sin
+0000d0bf   _c_int00
+0000d105   _atoi
+0000d136   _InitPieCtrl
+0000d155   _EnableInterrupts
+0000d15e   FD$$TOFS
+0000d182   _sqrt
+0000d1a5   I$$DIV
+0000d1b6   I$$MOD
+0000d1c7   ___memcpy_ff
+0000d1e8   _InitPieVectTable
+0000d208   FD$$TOL
+0000d227   I$$TOFD
+0000d244   FS$$TOFD
+0000d260   __args_main
+0000d279   C$$EXIT
+0000d279   _abort
+0000d27b   _exit
+0000d292   _frexp
+0000d2a8   LL$$MPY
+0000d2bc   FD$$SUB
+0000d2ca   U$$DIV
+0000d2cf   U$$MOD
+0000d2d5   _strcmp
+0000d2df   __register_unlock
+0000d2e3   __register_lock
+0000d2e7   __nop
+0000d2e8   _DSP28x_usDelay
+0000d2ec   _atof
+0000d2f0   ___cinit__
+0000d2f0   ___etext__
+0000d2f0   _cinit_runstart
+0000d2f0   cinit
+0000d2f0   etext
+0000de1c   __ctypes_
+0000de1c   _econst_runstart
+0000df1e   _PieVectTableInit
+0000e01e   _MEANCYCLE
+0000e020   _U4i_sat
+0000e022   _U3i_sat
+0000e024   _U2i_sat
+0000e026   _PULSE_MAX
+0000e028   _PULSE_MIN
+0000e02a   _U3d_sat
+0000e02c   _U2d_sat
+0000e02e   _U4d_sat
+0000e030   _U2_sat
+0000e032   _U4_sat
+0000e034   _U3_sat
+0000e036   _fGYRO
+0000e038   _Duty_New
+0000e03c   _MAGNETIC_VARIATION
+0000e03e   _pi
+0000e040   _Duty_New_b
+0000e042   _basicOutFly
+0000e044   _basicOutGround
+0000e046   _fMag
+0000e048   _INTG_POS_SAT
+0000e04a   _fACC
+0000e090   _biasGravity
+0000e092   _Kha
+0000e094   _Khv
+0000e096   _Khba
+0000e09e   _B_acc
+0000e0a4   _B_gyro
+0000e0aa   _K_acc
+0000e0b0   _K_gyro
+0000e0b6   _MAG_OFFSET
+0000e0bc   _MAG_SCALE
+0000e0c2   _RCinputDZ
+0000e0d4   _PITCH_SAT
+0000e0d6   _fATTSET
+0000e0d8   _DTIME_INNERLOOP
+0000e0de   _KitoVel
+0000e0e2   _addr_server
+0000e0e6   _errYaw
+0000e0e8   _minyawstep
+0000e0ea   _HMCCOUNTend
+0000e0eb   _HMCCOUNTbegin
+0000e0ec   _HMC_threshold
+0000e0ee   _w_sat
+0000e0f0   _switch_runstart
+0000ec00   _SD_buffer
+0000f000   .bss
+0000f000   ___bss__
+0000f000   ___end__
+0000f000   _cnt_URMTrigger
+0000f000   end
+0000f001   _bTurnAuto
+0000f002   _bUSIdle
+0000f003   _cnt_CG
+0000f004   _rec_Scib
+0000f005   _RX_Count
+0000f006   _cnt_SDR
+0000f007   _bThroOff
+0000f008   _isTakeOff
+0000f009   _time_count_UWB
+0000f00a   _cnt_SV
+0000f00b   _BiasGPS_X
+0000f00c   _cnt_comma
+0000f00d   _data_temp
+0000f00e   _BiasGPS_Y
+0000f00f   _isSure
+0000f010   _pTail
+0000f011   _lenGPS
+0000f012   _cnt_MA
+0000f013   _pHead
+0000f014   _cnt_GPS
+0000f015   _cnt_RC6
+0000f016   _cnt_GRC
+0000f017   _bShutdown
+0000f018   _bRC6high
+0000f019   _retSD
+0000f01a   _FlagSetHP
+0000f01b   _countHomePoint
+0000f01c   _rec_Scic
+0000f01d   _rec_Scia
+0000f01e   _lenWRL
+0000f01f   _debugonly
+0000f020   _cnt_SDW
+0000f021   _lenBuffer
+0000f022   _cnt_SDBA
+0000f023   _pWrite
+0000f024   _offBufHead
+0000f025   _offBufTail
+0000f026   _accy_feed_
+0000f028   _Height_URM37
+0000f02a   _accx_feed_
+0000f02c   _KLong2Meter
+0000f02e   _KLati2Meter
+0000f030   _Kp_x
+0000f032   _accx_feed
+0000f034   _accy_feed
+0000f036   _U3d
+0000f038   _U4d
+0000f03a   _U3i
+0000f03c   _U2i
+0000f03e   _U4_
+0000f040   _U2
+0000f042   _U3_
+0000f044   _U2_
+0000f046   _U2d
+0000f048   _U4i
+0000f04a   _U3
+0000f04c   _Ts_roll
+0000f04e   _Ts_yaw
+0000f050   _Ts_pitch
+0000f052   _RC_alfa
+0000f054   _RCInput
+0000f056   _U4
+0000f058   _anglenow
+0000f05a   _Kp_y
+0000f05c   _height_
+0000f05e   _err_vheight_
+0000f060   _err_height
+0000f062   _err_vheight
+0000f064   _err_height_
+0000f066   _t_error
+0000f068   _vheight_
+0000f06a   _intg_height
+0000f06c   _bufI32
+0000f06e   _basicOut
+0000f070   _tv
+0000f072   _Ki_z
+0000f074   _intgY
+0000f076   _intgX
+0000f078   _Kd_y
+0000f07a   _Sector_buffer
+0000f07c   _flp_temp
+0000f07e   _Ki_x
+0000f080   _Kd_z
+0000f082   _Kp_z
+0000f084   _Tsita_hat
+0000f086   _Cfai_hat
+0000f088   _Csita_hat
+0000f08a   _Sfai_hat
+0000f08c   _Ki_y
+0000f08e   _vTemp
+0000f090   _Kd_x
+0000f092   _pdX
+0000f094   _pdY
+0000f096   _err_pitch
+0000f09a   _err_roll
+0000f09e   _err_yaw
+0000f0a2   _err_pitch_f
+0000f0a6   _err_roll_f
+0000f0aa   _err_yaw_f
+0000f0ae   _RCinputSM
+0000f0b2   _Atitude_zero
+0000f0b6   _att_set_NAV
+0000f0ba   _Cos_Latitude_zero
+0000f0c0   _Longitude_zero
+0000f0c4   _Latitude_zero
+0000f0c8   _vel1_set
+0000f0cc   _pos1_set
+0000f0d0   _gyro_V4
+0000f0d6   _att_set_V4
+0000f0dc   _Uout_gyro_
+0000f0e2   _Uout_V4plus_
+0000f0e8   _Uout_gyro
+0000f0ee   _Uout_V4plus
+0000f0f4   _homepoint
+0000f0fa   _buf_Acc
+0000f100   _posGPS_
+0000f106   _att_hat
+0000f10c   _d_att
+0000f112   _gyro_bias
+0000f118   _gyro_bias_sum
+0000f11e   _d_att_hat
+0000f124   _g
+0000f12a   _rc_att_out
+0000f130   _f
+0000f136   _rc_att_u_
+0000f140   _sensitivity
+0000f146   _strZigbeeResetAddr
+0000f14e   _att_1
+0000f156   _att_0
+0000f15e   _gyro_1
+0000f16a   _gyro_2
+0000f180   _mag_1
+0000f18c   _mag_0
+0000f198   _RC_width
+0000f1a4   _mag_2
+0000f1b0   _acc_0
+0000f1c0   _gyro_0
+0000f1cc   _acc_2
+0000f1d8   _acc_1
+0000f1e4   _rdataA
+0000f200   _rc_att_z_
+0000f212   _rc_att_z
+0000f224   _UWB
+0000f240   _pComma
+0000f254   _point_set
+0000f280   _Wirelessstring
+0000f2c0   _GPS
+0000f300   _UWBRxBuffer
+0000f340   _b_send
+0000f3c0   _msgRead
+0000f440   _msgRecv
+0000f4c0   _arraySchedule
+0000f540   _GPSstring
+0000f5c0   _ack
+0000f5c1   _swarmflag
+0000f5c2   _iNeighbors
+0000f5c3   _i_w
+0000f5c4   _FLAG_HeightFliter
+0000f5c5   _sendType
+0000f5c6   _pres_biased
+0000f5c7   _bInitializing
+0000f5c8   _timer_count
+0000f5c9   _bUWBUpdate
+0000f5ca   _bGPSUpdate
+0000f5cb   _bGPSnormal
+0000f5cc   _bStatus
+0000f5cd   _FlagYawRun
+0000f5ce   _YawSpinRun
+0000f5cf   _bAutoMode
+0000f5d0   _nsvGPS
+0000f5d1   _com_period_formation
+0000f5d2   _com_period_report
+0000f5d4   _time_zero
+0000f5d6   _w
+0000f5d8   _w_all
+0000f5da   _att_zero
+0000f5dc   _UWB_angle
+0000f5de   _height
+0000f5e0   _vHeight
+0000f5e2   _att_error
+0000f5e4   _w1
+0000f5e6   _sectorSD
+0000f5e8   _w3
+0000f5ea   _w2
+0000f5ec   _tGPS_1
+0000f5ee   _tGPS_0
+0000f5f0   _w_wheel
+0000f5f2   _msgR
+0000f5f4   _w4
+0000f5f6   _t0
+0000f5f8   _tempa
+0000f5fa   _yaw
+0000f5fc   _pres
+0000f600   _gyro_raw
+0000f603   _HMC_raw
+0000f606   _acc_raw
+0000f609   _cmps_raw
+0000f60c   _RCpos_set
+0000f610   _pwm_i
+0000f614   _fsm
+0000f618   _timeGPS
+0000f61c   _RCacc_set
+0000f620   _RCspd_set
+0000f624   _att_set
+0000f62a   _posGPS
+0000f630   _att
+0000f636   _att2
+0000f640   _vGPS_dif
+0000f646   _vGPS
+0000f64c   _vGPS_ori
+0000f652   _n
+0000f658   _acc
+0000f65e   _ure
+0000f664   _mag
+0000f66a   _gyro
+0000f670   _att_a
+0000f676   _acc_f
+0000f680   _uwbvel
+0000f686   _spd_set
+0000f68c   _v_ctrl
+0000f692   _spd_sett_
+0000f698   _acc_set
+0000f69e   _p_c
+0000f6a4   _vel
+0000f6aa   _pos_set
+0000f6b0   _pos_r
+0000f6b6   _pos4
+0000f6c0   _uwbpos
+0000f6c6   _pos3
+0000f6cc   _pos
+0000f6d2   _acc_bodyframe
+0000f6d8   _pos2
+0000f6de   _pos_zero
+0000f6e4   _output
+0000f6ec   _pwm
+0000f6f4   _rcctrl
+0000f700   _cmdS
+0000f714   _cmdR
+0000f740   _aSelf
+0000f780   _aRef
+0000f7c0   _aNeighbors
+0000f800   _msg
+0000f880   _scdFlight
+0000f8f4   _output_TLC
+0000f8f5   _cnt_HQ7001
+0000f8f6   _cnt_TLC
+0000f8f7   _cRet
+0000f8f8   _bSDExist
+0000f8f9   _retSDEx
+0000f8fa   _ret_HQ7001
+0000f8fb   _iSD
+0000f8fc   _cnt_SD
+0000f8fd   _cnt_landing
+0000f8fe   _cnt_idle
+0000f8ff   _cnt_XS
+0000f900   _triangle_y
+0000f902   _triangle_x
+0000f904   _sita_ori
+0000f906   _sita_t
+0000f908   _acce
+0000f90a   _t_Traj
+0000f90c   _disp
+0000f90e   _length
+0000f910   _vmax
+0000f912   _w_sin
+0000f916   _spd
+0000f940   _traj_ab
+0000fa00   _traj_ref
+0000fac0   _tmCom
+0000fac2   _k21
+0000fac4   _k12
+0000fac6   _k22
+0000fac8   _kv
+0000faca   _Kp_Decent
+0000facc   _offsetvx
+0000face   _av
+0000fad8   _c
+0000fada   _periodT
+0000fadc   _det_x
+0000fade   _ax1
+0000fae0   _det_y
+0000fae2   _uy
+0000fae4   _ux
+0000fae6   _ax2
+0000fae8   _k11
+0000faea   _qlast
+0000faee   _q
+0000faf2   _vel_hat_r
+0000faf8   _pos_hat_r
+0000fb00   _res2
+0000fb06   _res1
+0000fb0c   _pos_hat_e_
+0000fb12   _pos_f
+0000fb18   _u
+0000fb1e   _pos_hat_r_
+0000fb24   _vel_f
+0000fb2a   _vel_hat_r_
+0000fb30   _f_hat
+0000fb36   _vv_
+0000fb40   _f_hat_
+0000fb46   _pos_hat_e
+0000fb4c   _vel_hat_e_
+0000fb52   _vv
+0000fb58   _vel_hat_e
+0000fb5e   _uatt_0
+0000fb66   _uatt_1
+0000fb6e   _addrNeighbors
+0000fb7a   __unlock
+0000fb7c   __lock
+0000fb7e   _errno
+0000fb80   _cntUSoff
+0000fb81   _cntUSjump
+0000fbbc   _t_
+0000fbbe   _diffvmax
+0000fbc0   _t
+0000fbda   _v_hat
+0000fbe0   _p_hat
+0000fbe6   _p_hat_
+0000fbec   _ep
+0000fbf2   _ev
+0000fbf8   _pi_
+0000fc00   _v_hat_
+0000fc06   _ag_
+0000fc0c   _vi_
+0000fc22   _bMS5803_On
+0000fc23   _cHigh
+0000fc24   _T_REF
+0000fc25   _TEMPSENS
+0000fc26   _TCO
+0000fc27   _iMS5803
+0000fc28   _retMS5803
+0000fc29   _bPrs
+0000fc2a   _bTemp
+0000fc2b   _cLow
+0000fc2c   _OFF_T1
+0000fc2d   _TCS
+0000fc2e   _SENS_T1
+0000fc30   _D1
+0000fc32   _TEMP
+0000fc34   _dT
+0000fc36   _D2
+0000fc38   _SENS
+0000fc3c   _OFF
+0000fc40   _CpuTimer1
+0000fc48   _CpuTimer2
+0000fc50   _CpuTimer0
+0000fc58   _iHMC
+0000fc59   _cnt_HMC
+0000fc5a   _retHMC
+0000fc5b   _MagZ
+0000fc5c   _MagX
+0000fc5d   _MagY
+0000fc5e   _Ratio_HMC
+0000fc60   _cmps_raw_
+0000fc63   _cmps_sum
+0000fc66   _bLeader
+0000fc68   _pos_leader
+0000fc6e   _vel_leader
+0000fc74   ___TI_cleanup_ptr
+0000fc76   ___TI_dtors_ptr
+00300000   _text_loadstart
+003052f0   _cinit_loadstart
+00305e1c   _econst_loadstart
+003060f0   _switch_loadstart
+00338000   copy_sections
+0033fff6   code_start
+0033fff8   _CsmPwl
+00380080   _ADC_cal
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[780 symbols]
